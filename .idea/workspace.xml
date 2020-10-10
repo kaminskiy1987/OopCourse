@@ -20,9 +20,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Range/src/ru/oopcourse/range1/Range.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Range/src/ru/oopcourse/range1/RangeMain.java" afterDir="false" />
+    <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add project Range*">
+      <change afterPath="$PROJECT_DIR$/Range1/Range1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Range1/src/ru/oopcourse/range1/Range.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Range1/src/ru/oopcourse/range1/RangeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/range1/Range.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/range1/RangeMain.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602305886079</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add project Range*">
+      <created>1602306277966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602306277966</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,29 +188,30 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add project Range" />
     <MESSAGE value="Add project Shapes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add project Shapes" />
+    <MESSAGE value="Add project Range*" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add project Range*" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="0" key="CommitChangelistDialog2" timestamp="1602305883995">
+    <state x="454" y="0" key="CommitChangelistDialog2" timestamp="1602306563419">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1602305883995" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1602305762860">
+    <state x="454" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1602306563419" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1602306230729">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602305762860" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1602305762860">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602306230729" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1602306230729">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602305762860" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1602305762860">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602306230729" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1602306230729">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602305762860" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1602305762860">
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602306230729" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1602306230729">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602305762860" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602306230729" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1601556723948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -211,9 +224,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="506" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860@0.0.1600.860" timestamp="1601557510068" />
-    <state x="182" y="50" key="new project wizard" timestamp="1602305400971">
+    <state x="182" y="50" key="new project wizard" timestamp="1602306681955">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1602305400971" />
+    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1602306681955" />
   </component>
 </project>

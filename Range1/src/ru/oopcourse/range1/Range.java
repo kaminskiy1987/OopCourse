@@ -53,7 +53,6 @@ public class Range {
             System.out.println("Обьединение");
             System.out.printf("Интервалы (%f, %f), (%f, %f)", from, to, range.getFrom(), range.getTo());
         }
-
         System.out.println();
     }
 
