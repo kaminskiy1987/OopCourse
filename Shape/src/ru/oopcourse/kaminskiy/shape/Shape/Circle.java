@@ -1,6 +1,6 @@
-package ru.oopcourse.shapes.kaminskiy;
+package ru.oopcourse.kaminskiy.shape.Shape;
 
-public class Circle implements Shapes {
+public class Circle implements Shape {
     private final double radius;
 
     private static final String name = "Circle";
@@ -37,7 +37,9 @@ public class Circle implements Shapes {
     public int hashCode() {
         final int prime = 37;
         int hash = 1;
+
         hash = prime * hash + Double.hashCode(radius);
+
         return hash;
     }
 
@@ -47,17 +49,17 @@ public class Circle implements Shapes {
             return true;
         }
 
-        if (o == null || o.getClass() != this.getClass()) {
+        if (o == null || o.getClass() != getClass()) {
             return false;
         }
 
-        Circle p = (Circle) o;
+        Circle c = (Circle) o;
 
-        return radius == p.radius;
+        return radius == c.radius;
     }
 
     @Override
     public String toString() {
-        return getName() + "(" + radius + ")";
+        return name + "(" + radius + ")";
     }
 }

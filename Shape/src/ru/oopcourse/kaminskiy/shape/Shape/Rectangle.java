@@ -1,6 +1,6 @@
-package ru.oopcourse.shapes.kaminskiy;
+package ru.oopcourse.kaminskiy.shape.Shape;
 
-public class Rectangle implements Shapes {
+public class Rectangle implements Shape {
     private final double height;
     private final double width;
 
@@ -39,8 +39,10 @@ public class Rectangle implements Shapes {
     public int hashCode() {
         final int prime = 37;
         int hash = 1;
+
         hash = prime * hash + Double.hashCode(width);
         hash = prime * hash + Double.hashCode(height);
+
         return hash;
     }
 
@@ -50,17 +52,17 @@ public class Rectangle implements Shapes {
             return true;
         }
 
-        if (o == null || o.getClass() != this.getClass()) {
+        if (o == null || o.getClass() != getClass()) {
             return false;
         }
 
-        Rectangle p = (Rectangle) o;
+        Rectangle r = (Rectangle) o;
 
-        return width == p.width && height == p.height;
+        return width == r.width && height == r.height;
     }
 
     @Override
     public String toString() {
-        return getName() + "(" + height + ", " + width + ")";
+        return name + "(" + height + "; " + width + ")";
     }
 }

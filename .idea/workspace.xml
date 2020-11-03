@@ -21,8 +21,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add files Vector, VectorMain">
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapesmain/kaminskiy/ShapesMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/AreaComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/PerimeterComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/ShapeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/Shapes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/Shape.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/ShapesMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Shapes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Triangle.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="Application.VectorMain">
+  <component name="RunManager" selected="Application.ShapeMain">
     <configuration name="RangeMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.range1.RangeMain" />
       <module name="Range" />
@@ -78,9 +90,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShapeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.shape_main.ShapeMain.ShapeMain" />
+      <module name="Shape" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.shape_main.ShapeMain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShapesMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.shapes.ShapesMain" />
-      <module name="Shapes" />
+      <module name="Shape" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.oopcourse.shapes.*" />
@@ -106,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShapeMain" />
         <item itemvalue="Application.VectorMain" />
         <item itemvalue="Application.RangeMain (1)" />
         <item itemvalue="Application.ShapesMain" />
@@ -209,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604116047412</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add files Vector, VectorMain">
+      <created>1604116179073</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604116179073</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,10 +273,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add files Vector, VectorMain" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="0" key="CommitChangelistDialog2" timestamp="1604116038302">
+    <state x="454" y="0" key="CommitChangelistDialog2" timestamp="1604116252876">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1604116038302" />
+    <state x="454" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1604116252876" />
+    <state x="152" y="68" key="DiffContextDialog" timestamp="1604116313456">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604116313456" />
     <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1602906572537">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -264,10 +301,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601556723948" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1604116134518">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1604116366970">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1604116134518" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1604116366970" />
     <state x="506" y="218" key="git4idea.merge.GitPullDialog" timestamp="1601557510068">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
