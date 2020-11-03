@@ -27,7 +27,7 @@ public class ShapeMain {
         getMaxArray(shapes);
         getPerimeter(shapes);
 
-        System.out.println("Максимальная площадь: " + getMaxArray(shapes));
-        System.out.println("Второй по величине периметр: " + getPerimeter(shapes));
+        System.out.println("Максимальная площадь " + getMaxArray(shapes));
+        System.out.println("Второй по величине периметр " + getPerimeter(shapes));
     }
 }

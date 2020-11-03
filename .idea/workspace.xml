@@ -21,7 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add files Vector, VectorMain">
-      <change beforePath="$PROJECT_DIR$/Shapes/Shapes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/Shape.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/AreaComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/PerimeterComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/ShapeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/ShapeMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/ShapesMain.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Shapes.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Triangle.java" beforeDir="false" />
@@ -246,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604411241925</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add files Shape">
+      <created>1604411535266</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604411535266</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,48 +288,53 @@
     <MESSAGE value="Add files Vector, VectorMain" />
     <MESSAGE value="Add files Shape, Circle, Triangle, Rectangle, Square, AreaComparator, PerimeterComparator, ShapeMain" />
     <MESSAGE value="Add modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add modules" />
+    <MESSAGE value="Add files Shape" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files Shape" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="0" key="CommitChangelistDialog2" timestamp="1604411239659">
+    <state x="454" y="0" key="CommitChangelistDialog2" timestamp="1604411995564">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1604411239659" />
-    <state x="152" y="68" key="DiffContextDialog" timestamp="1604411278048">
+    <state x="454" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1604411995564" />
+    <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604411278048" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1604410987060">
+    <state width="380" height="442" key="Diff.GoToChangePopup/0.0.1600.860@0.0.1600.860" timestamp="1604411646468" />
+    <state x="152" y="68" key="DiffContextDialog" timestamp="1604411647999">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1604410987060" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1604410987060">
+    <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604411647999" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1604412102069">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1604410987060" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1604410987060">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1604412102069" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1604412102069">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1604410987060" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1604410987060">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1604412102069" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1604412102069">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1604410987060" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1604412102069" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1604412102069">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1604412102069" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1601556723948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601556723948" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1604411279361">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1604411908786">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1604411279361" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1604411908786" />
     <state x="506" y="218" key="git4idea.merge.GitPullDialog" timestamp="1601557510068">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="506" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860@0.0.1600.860" timestamp="1601557510068" />
-    <state x="182" y="50" key="new project wizard" timestamp="1602905877207">
+    <state x="182" y="50" key="new project wizard" timestamp="1604412327327">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1602905877207" />
+    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1604412327327" />
   </component>
 </project>

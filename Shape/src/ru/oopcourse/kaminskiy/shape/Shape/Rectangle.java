@@ -56,9 +56,9 @@ public class Rectangle implements Shape {
             return false;
         }
 
-        Rectangle r = (Rectangle) o;
+        Rectangle p = (Rectangle) o;
 
-        return width == r.width && height == r.height;
+        return width == p.width && height == p.height;
     }
 
     @Override
