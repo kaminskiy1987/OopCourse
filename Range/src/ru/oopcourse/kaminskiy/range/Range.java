@@ -1,4 +1,4 @@
-package ru.oopcourse.kaminskiy.range.Range;
+package ru.oopcourse.kaminskiy.range;
 
 public class Range {
     private double from;
@@ -7,10 +7,6 @@ public class Range {
     public Range(double from, double to) {
         this.from = from;
         this.to = to;
-    }
-
-    public String toString() {
-        return "(" + from + "; " + to + ")";
     }
 
     public double getFrom() {
@@ -27,6 +23,10 @@ public class Range {
 
     public void setTo(double to) {
         this.to = to;
+    }
+
+    public String toString() {
+        return "(" + from + "; " + to + ")";
     }
 
     public double getLength() {
@@ -46,7 +46,7 @@ public class Range {
     }
 
     public Range getIntersection(Range range) {
-        if (to < range.from || from > range.to) {
+        if (to < range.from || from > range.to || (from > range.from && to > range.to) || (from < range.from && to < range.to)) {
             return null;
         }
 
@@ -54,7 +54,7 @@ public class Range {
     }
 
     public Range[] getDifference(Range range) {
-        if (from > range.to || to < range.from) {
+        if (from > range.to || to < range.from || (from > range.from && to > range.to) || (from < range.from && to < range.to)) {
             return new Range[0];
         }
 
