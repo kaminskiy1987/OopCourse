@@ -1,9 +1,9 @@
-package ru.oopcourse.kaminskiy.shape.Shape;
+package ru.oopcourse.kaminskiy.shape;
 
 public class Circle implements Shape {
     private final double radius;
 
-    private static final String name = "Circle";
+    public static final String NAME_SHAPE = "Circle";
 
     public Circle(double radius) {
         this.radius = radius;
@@ -31,7 +31,7 @@ public class Circle implements Shape {
 
     @Override
     public String getName() {
-        return name;
+        return NAME_SHAPE;
     }
 
     public int hashCode() {
@@ -60,6 +60,6 @@ public class Circle implements Shape {
 
     @Override
     public String toString() {
-        return name + "(" + radius + ")";
+        return "{" + NAME_SHAPE + " (" + "radius: " + radius + ")" + "}";
     }
 }

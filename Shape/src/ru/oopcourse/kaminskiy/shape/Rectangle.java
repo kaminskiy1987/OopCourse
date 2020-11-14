@@ -1,10 +1,10 @@
-package ru.oopcourse.kaminskiy.shape.Shape;
+package ru.oopcourse.kaminskiy.shape;
 
 public class Rectangle implements Shape {
     private final double height;
     private final double width;
 
-    private static final String name = "Rectangle";
+    public static final String NAME_SHAPE = "Rectangle";
 
     public Rectangle(double height, double width) {
         this.height = height;
@@ -33,7 +33,7 @@ public class Rectangle implements Shape {
 
     @Override
     public String getName() {
-        return name;
+        return NAME_SHAPE;
     }
 
     public int hashCode() {
@@ -63,6 +63,6 @@ public class Rectangle implements Shape {
 
     @Override
     public String toString() {
-        return name + "(" + height + "; " + width + ")";
+        return "{" + NAME_SHAPE + " (" + "height: " + height + "; width: " + width + ")" + "}";
     }
 }

@@ -1,9 +1,9 @@
-package ru.oopcourse.kaminskiy.shape.Shape;
+package ru.oopcourse.kaminskiy.shape;
 
 public class Square implements Shape {
     private final double sideLength;
 
-    private static final String name = "Square";
+    public static final String NAME_SHAPE = "Square";
 
     public Square(double sideLength) {
         this.sideLength = sideLength;
@@ -31,7 +31,7 @@ public class Square implements Shape {
 
     @Override
     public String getName() {
-        return name;
+        return NAME_SHAPE;
     }
 
     public int hashCode() {
@@ -60,6 +60,6 @@ public class Square implements Shape {
 
     @Override
     public String toString() {
-        return name + "(" + sideLength + ")";
+        return "{" + NAME_SHAPE + " (sideLength: " + sideLength + ")" + "}";
     }
 }

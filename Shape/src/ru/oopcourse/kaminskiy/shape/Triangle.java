@@ -1,4 +1,4 @@
-package ru.oopcourse.kaminskiy.shape.Shape;
+package ru.oopcourse.kaminskiy.shape;
 
 public class Triangle implements Shape {
     private final double x1;
@@ -8,7 +8,7 @@ public class Triangle implements Shape {
     private final double x3;
     private final double y3;
 
-    private static final String name = "Triangle";
+    public static final String NAME_SHAPE = "Triangle";
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         this.x1 = x1;
@@ -29,17 +29,23 @@ public class Triangle implements Shape {
         return Math.max(Math.max(y1, y2), y3) - Math.min(Math.min(y1, y2), y3);
     }
 
-    public double[] getSidesLengths() {
-        return new double[]{Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)),
-                Math.sqrt(Math.pow(x3 - x1, 2) + Math.pow(y3 - y1, 2)),
-                Math.sqrt(Math.pow(x3 - x2, 2) + Math.pow(y3 - y2, 2))};
+    private double getLengthOfOneSide(double x2, double x1, double y2, double y1) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+
+    private double[] getSidesLengths() {
+        return new double[]{
+                getLengthOfOneSide(x2, x1, y2, y1),
+                getLengthOfOneSide(x3, x1, y3, y1),
+                getLengthOfOneSide(x3, x2, y3, y2)
+        };
     }
 
     @Override
     public double getArea() {
         double[] sidesLengths = getSidesLengths();
 
-        double triangleHalfPerimeter = getPerimeter() / 2;
+        double triangleHalfPerimeter = (sidesLengths[0] + sidesLengths[1] + sidesLengths[2]) / 2;
 
         return Math.sqrt(triangleHalfPerimeter * (triangleHalfPerimeter - sidesLengths[0]) * (triangleHalfPerimeter - sidesLengths[1]) * (triangleHalfPerimeter - sidesLengths[2]));
     }
@@ -53,7 +59,7 @@ public class Triangle implements Shape {
 
     @Override
     public String getName() {
-        return name;
+        return NAME_SHAPE;
     }
 
     public int hashCode() {
@@ -87,6 +93,6 @@ public class Triangle implements Shape {
 
     @Override
     public String toString() {
-        return name + "A(" + x1 + "; " + y1 + "), B(" + x2 + "; " + y2 + "), C(" + x3 + "; " + y3 + ")";
+        return "{" + NAME_SHAPE + " A(x1: " + x1 + "; y1: " + y1 + "), B(x2: " + x2 + "; y2: " + y2 + "), C(x3: " + x3 + "; y3: " + y3 + ")" + "}";
     }
 }
