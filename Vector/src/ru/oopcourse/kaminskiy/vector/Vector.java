@@ -5,120 +5,127 @@ import java.util.Arrays;
 public class Vector {
     private double[] components;
 
-    public Vector(int arraySize) {
-        if (arraySize <= 0) {
-            throw new IllegalArgumentException("arraySize must be > 0");
+    public Vector(int size) {
+        if (size <= 0) {
+            throw new IllegalArgumentException(size + "must be >= 0");
         }
 
-        components = new double[arraySize];
+        components = new double[size];
     }
 
     public Vector(Vector vector) {
+        this(vector.components);
+
         vector.components = Arrays.copyOf(vector.components, vector.getSize());
     }
 
     public Vector(double[] array) {
-        int arraySize = array.length;
-        components = new double[arraySize];
+        if (array.length <= 0) {
+            throw new IllegalArgumentException(array.length + "must be >= 0");
+        }
 
-        System.arraycopy(array, 0, components, 0, arraySize);
+        components = new double[array.length];
+
+        components = Arrays.copyOf(array, array.length);
     }
 
-    public Vector(int arraySize, double[] array) {
-        if (arraySize <= 0) {
-            throw new IllegalArgumentException("arraySize must be > 0");
+    public Vector(int size, double[] array) {
+        if (size <= 0) {
+            throw new IllegalArgumentException(size + "must be >= 0");
         }
 
-        for (int i = 0; i <= arraySize; i++) {
-            if (array.length < arraySize) {
-                components = new double[arraySize];
-            } else {
-                assert false;
-                components[i] = array[i];
-            }
+        assert false;
+        if (array.length < size) {
+            components = Arrays.copyOf(components, getSize());
+        } else {
+            components = Arrays.copyOf(components, array.length);
         }
+
     }
 
     public int getSize() {
-        return this.components.length;
+        return components.length;
     }
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        String commaWithSpace = ", ";
-        String openingCurlyBrace = "{ ";
 
-        stringBuilder.append(openingCurlyBrace);
+        stringBuilder.append("{");
 
         for (int i = 0; i < getSize(); i++) {
-            stringBuilder.append(components[i]).append(commaWithSpace);
+            stringBuilder.append(components[i]).append(", ");
         }
 
-        stringBuilder.deleteCharAt(stringBuilder.length() - 2).append("}");
+        stringBuilder.deleteCharAt(stringBuilder.length() - 2).setCharAt(stringBuilder.length() - 1, '}');
 
         return stringBuilder.toString();
     }
 
-    public double[] getSum(Vector vector) {
-        if (this.getSize() != vector.getSize()) {
-            throw new IllegalArgumentException("arraySize must be equal to vector.arraySize");
+    public double getComponents(int index) {
+        if (index < 0 || index > components.length) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return components[index];
+    }
+
+    public void setComponents(int index, double value) {
+        if (index > 0 || index < components.length) {
+            components[index] = value;
+        } else {
+            components = Arrays.copyOf(components, index);
+        }
+    }
+
+    public void add(Vector vector) {
+        if (this.getSize() < vector.getSize()) {
+            vector.components = Arrays.copyOf(vector.components, vector.getSize());
         }
 
         double[] result = new double[vector.getSize()];
+
         for (int i = 0; i < vector.getSize(); i++) {
-            result[i] = this.components[i] + vector.components[i];
+            result[i] = components[i] + vector.components[i];
         }
 
-        return result;
     }
 
-    public double[] getSubtraction(Vector vector) {
-        if (this.getSize() != vector.getSize()) {
-            throw new IllegalArgumentException("arraySize must be equal to vector.arraySize");
+    public void subtraction(Vector vector) {
+        if (this.getSize() < vector.getSize()) {
+            vector.components = Arrays.copyOf(vector.components, vector.getSize());
         }
 
         double[] result = new double[vector.getSize()];
 
         for (int i = 0; i < vector.getSize(); i++) {
-            result[i] = this.components[i] - vector.components[i];
+            result[i] = components[i] - vector.components[i];
         }
-
-        return result;
     }
 
-    public double[] getScalarMultiplication(Vector vector, double scalar) {
-        double[] result = new double[vector.getSize()];
+    public void multiplyScalar(double scalar) {
+        double[] result = new double[getSize()];
 
-        for (int i = 0; i < vector.getSize(); i++) {
-            result[i] = scalar * this.components[i];
+        for (int i = 0; i < components.length; i++) {
+            result[i] = scalar * components[i];
         }
-
-        return result;
     }
 
-    public double getVectorLength(Vector vector) {
-        int arraySize = vector.getSize();
-        if (arraySize != vector.getSize()) {
-            throw new IllegalArgumentException("arraySize must be equal to vector.arraySize");
-        }
-
-        double sum = 0.0;
-
-        for (int i = 0; i < arraySize; i++) {
-            sum += this.components[i] * vector.components[i];
-        }
-        return Math.sqrt(sum);
+    public void vectorReversal() {
+        multiplyScalar(-1.0);
     }
 
+    public double getVectorLength() {
+        return components.length;
+    }
+
+    @Override
     public int hashCode() {
         final int prime = 37;
         int hash = 1;
-        hash = prime * hash + getSize();
         hash = prime * hash + Arrays.hashCode(components);
         return hash;
     }
 
-
+    @Override
     public boolean equals(Object o) {
         if (o == this) {
             return true;
@@ -128,34 +135,42 @@ public class Vector {
             return false;
         }
 
-        Vector p = (Vector) o;
+        Vector v = (Vector) o;
 
-        return ((Vector) o).getSize() == p.getSize() && Arrays.equals(components, p.components);
+        return Arrays.equals(components, v.components);
     }
 
-    public static Vector getVectorSum(Vector vector1, Vector vector2) {
-        Vector result;
-        result = new Vector(vector1.getSize());
-        for (int i = 0; i < vector1.getSize(); i++) {
-            result.components[i] = vector1.components[i] + vector2.components[i];
+    public static Vector getSum(Vector vector1, Vector vector2) {
+        if (vector1.getSize() < 0 || vector2.getSize() < 0) {
+            throw new IllegalArgumentException(vector1.getSize() + "or" + vector2.getSize() + "must be >= 0");
         }
+
+        Vector result = new Vector(vector1.getSize());
+
+        vector2.add(vector1);
 
         return result;
     }
 
-    public static Vector getVectorSubtraction(Vector vector1, Vector vector2) {
-        Vector result;
-        result = new Vector(vector1.getSize());
-        for (int i = 0; i < vector1.getSize(); i++) {
-            result.components[i] = vector1.components[i] - vector2.components[i];
+    public static Vector getDifference(Vector vector1, Vector vector2) {
+        if (vector1.getSize() < 0 || vector2.getSize() < 0) {
+            throw new IllegalArgumentException(vector1.getSize() + "or" + vector2.getSize() + "must be >= 0");
         }
+
+        Vector result = new Vector(vector1.getSize());
+
+        result.subtraction(vector2);
 
         return result;
     }
 
-    public static Vector getVectorScalarMultiplication(Vector vector1, Vector vector2) {
-        Vector result;
-        result = new Vector(vector1.getSize());
+    public static Vector getScalarProduct(Vector vector1, Vector vector2) {
+        if (vector1.getSize() < 0 || vector2.getSize() < 0) {
+            throw new IllegalArgumentException(vector1.getSize() + "or" + vector2.getSize() + "must be >= 0");
+        }
+
+        Vector result = new Vector(vector1.getSize());
+
         for (int i = 0; i < vector1.getSize(); i++) {
             result.components[i] += vector1.components[i] * vector2.components[i];
         }
