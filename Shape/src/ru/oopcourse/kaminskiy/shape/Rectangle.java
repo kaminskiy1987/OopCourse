@@ -4,7 +4,7 @@ public class Rectangle implements Shape {
     private final double height;
     private final double width;
 
-    public static final String NAME_SHAPE = "Rectangle";
+    public static final String NAME = "Rectangle";
 
     public Rectangle(double height, double width) {
         this.height = height;
@@ -33,7 +33,7 @@ public class Rectangle implements Shape {
 
     @Override
     public String getName() {
-        return NAME_SHAPE;
+        return NAME;
     }
 
     public int hashCode() {
@@ -56,13 +56,13 @@ public class Rectangle implements Shape {
             return false;
         }
 
-        Rectangle p = (Rectangle) o;
+        Rectangle r = (Rectangle) o;
 
-        return width == p.width && height == p.height;
+        return width == r.width && height == r.height;
     }
 
     @Override
     public String toString() {
-        return "{" + NAME_SHAPE + " (" + "height: " + height + "; width: " + width + ")" + "}";
+        return "{" + NAME + " height: " + height + "; width: " + width + "; area: " + getArea() + "; perimeter: " + getPerimeter() + "}";
     }
 }

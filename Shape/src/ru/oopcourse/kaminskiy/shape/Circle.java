@@ -3,10 +3,14 @@ package ru.oopcourse.kaminskiy.shape;
 public class Circle implements Shape {
     private final double radius;
 
-    public static final String NAME_SHAPE = "Circle";
+    public static final String NAME = "Circle";
 
     public Circle(double radius) {
         this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
     }
 
     @Override
@@ -31,7 +35,7 @@ public class Circle implements Shape {
 
     @Override
     public String getName() {
-        return NAME_SHAPE;
+        return NAME;
     }
 
     public int hashCode() {
@@ -60,6 +64,6 @@ public class Circle implements Shape {
 
     @Override
     public String toString() {
-        return "{" + NAME_SHAPE + " (" + "radius: " + radius + ")" + "}";
+        return "{" + NAME + " radius: " + radius + "; area: " + getArea() + "; perimeter: " + getPerimeter() + "}";
     }
 }

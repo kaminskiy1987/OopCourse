@@ -3,10 +3,14 @@ package ru.oopcourse.kaminskiy.shape;
 public class Square implements Shape {
     private final double sideLength;
 
-    public static final String NAME_SHAPE = "Square";
+    public static final String NAME = "Square";
 
     public Square(double sideLength) {
         this.sideLength = sideLength;
+    }
+
+    public double getSideLength() {
+        return sideLength;
     }
 
     @Override
@@ -31,7 +35,7 @@ public class Square implements Shape {
 
     @Override
     public String getName() {
-        return NAME_SHAPE;
+        return NAME;
     }
 
     public int hashCode() {
@@ -60,6 +64,7 @@ public class Square implements Shape {
 
     @Override
     public String toString() {
-        return "{" + NAME_SHAPE + " (sideLength: " + sideLength + ")" + "}";
+        return "{" + NAME + " sideLength: " + sideLength + "; area: " + getArea() + "; perimeter: " + getPerimeter() + "}";
+
     }
 }
