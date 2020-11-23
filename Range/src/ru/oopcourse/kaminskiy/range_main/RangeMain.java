@@ -12,7 +12,7 @@ public class RangeMain {
         System.out.print("Введите число для проверки: ");
         double number = scanner.nextDouble();
 
-        Range[] ranges = new Range[]{new Range(10, 30), new Range(15, 25)};
+        Range[] ranges = new Range[]{new Range(1, 7), new Range(3, 5)};
 
         System.out.println(Arrays.toString(ranges));
 
@@ -22,8 +22,8 @@ public class RangeMain {
         System.out.println("rangeLength: " + ranges[0].getLength());
         System.out.println("numberIsInsideRange: " + ranges[0].isInside(number));
 
-        ranges[0].setFrom(5);
-        ranges[0].setTo(50);
+        ranges[0].setFrom(2);
+        ranges[0].setTo(10);
 
         System.out.println();
         System.out.println("from: " + ranges[0].getFrom());
@@ -31,8 +31,8 @@ public class RangeMain {
         System.out.println("rangeLength: " + ranges[0].getLength());
         System.out.println("numberIsInsideRange: " + ranges[0].isInside(number));
 
-        System.out.println("getIntersection " + ranges[0].getIntersection(ranges[1]));
-        System.out.println("getUnion " + Arrays.toString(ranges[0].getUnion(ranges[1])));
-        System.out.println("getDifference " + Arrays.toString(ranges[0].getDifference(ranges[1])));
+        System.out.println("getIntersection: " + ranges[0].getIntersection(ranges[1]));
+        System.out.println("getUnion: " + Arrays.toString(ranges[0].getUnion(ranges[1])));
+        System.out.println("getDifference: " + Arrays.toString(ranges[0].getDifference(ranges[1])));
     }
 }
