@@ -6,21 +6,20 @@ import java.util.Arrays;
 
 public class ShapeMain {
     public static Shape getShapeWithMaxArea(Shape[] shapes) {
-        Arrays.sort(shapes, new AreaComparator());
-
         if (shapes.length == 0) {
             return null;
         }
+
+        Arrays.sort(shapes, new AreaComparator());
 
         return shapes[shapes.length - 1];
     }
 
-    public static Shape getShapeWithSecondValuePerimeter(Shape[] shapes) {
-        Arrays.sort(shapes, new PerimeterComparator());
-
-        if (shapes.length == 0) {
+    public static Shape getShapeWithSecondPerimeter(Shape[] shapes) {
+        if (shapes.length == 0 || shapes.length == 1) {
             return null;
         }
+        Arrays.sort(shapes, new PerimeterComparator());
 
         return shapes[shapes.length - 2];
     }
@@ -36,6 +35,6 @@ public class ShapeMain {
 
         System.out.println("Параметры фигур : " + Arrays.toString(shapes));
         System.out.println("Фигура с максимальной площадью: " + getShapeWithMaxArea(shapes));
-        System.out.println("Фигура со вторым по величине периметром: " + getShapeWithSecondValuePerimeter(shapes));
+        System.out.println("Фигура со вторым по величине периметром: " + getShapeWithSecondPerimeter(shapes));
     }
 }

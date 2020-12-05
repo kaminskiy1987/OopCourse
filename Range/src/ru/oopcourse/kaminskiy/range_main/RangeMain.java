@@ -12,7 +12,7 @@ public class RangeMain {
         System.out.print("Введите число для проверки: ");
         double number = scanner.nextDouble();
 
-        Range[] ranges = new Range[]{new Range(1, 7), new Range(3, 5)};
+        Range[] ranges = new Range[]{new Range(1, 5), new Range(1, 3)};
 
         System.out.println(Arrays.toString(ranges));
 
@@ -22,8 +22,8 @@ public class RangeMain {
         System.out.println("rangeLength: " + ranges[0].getLength());
         System.out.println("numberIsInsideRange: " + ranges[0].isInside(number));
 
-        ranges[0].setFrom(2);
-        ranges[0].setTo(10);
+        ranges[0].setFrom(1);
+        ranges[0].setTo(5);
 
         System.out.println();
         System.out.println("from: " + ranges[0].getFrom());

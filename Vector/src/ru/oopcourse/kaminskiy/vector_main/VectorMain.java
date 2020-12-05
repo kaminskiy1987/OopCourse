@@ -12,20 +12,21 @@ public class VectorMain {
 
         System.out.println("vector1 = " + vector1);
         System.out.println("vector2 = " + vector2);
-        System.out.println("vector1 = " + vector1.getSize());
+        System.out.println("vector1Size = " + vector1.getSize());
+        System.out.println("vector2Size = " + vector2.getSize());
+
+        System.out.println("Component = " + vector1.getComponent(2));
+        vector1.setComponent(2,3.0);
 
         vector1.add(vector2);
-        vector1.subtraction(vector2);
-        vector1.multiplyScalar(10);
-        vector1.vectorReversal();
+        vector1.subtract(vector2);
+        vector1.multiplyByScalar(10);
+        vector1.getReversal();
 
-        System.out.println("vector5  = " + vector1.getComponents(2));
-        vector1.setComponents(2, 5.0);
-
-        System.out.println("vector5  = " + Vector.getSum(vector1, vector2));
-        System.out.println("vector6  = " + Vector.getDifference(vector1, vector2));
-        System.out.println("vector7  = " + Vector.getScalarProduct(vector1, vector2));
-        System.out.println("length = " + vector1.getVectorLength());
+        System.out.println("Sum = " + Vector.getSum(vector1,vector2));
+        System.out.println("Difference = " + Vector.getDifference(vector1,vector2));
+        System.out.println("ScalarProduct = " + Vector.getScalarProduct(vector1,vector2));
+        System.out.println("length = " + vector1.getLength());
 
         System.out.println(vector1.equals(vector2));
         System.out.println(vector1.hashCode());

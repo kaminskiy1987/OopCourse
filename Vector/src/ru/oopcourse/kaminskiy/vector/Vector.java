@@ -7,7 +7,7 @@ public class Vector {
 
     public Vector(int size) {
         if (size <= 0) {
-            throw new IllegalArgumentException(size + "must be >= 0");
+            throw new IllegalArgumentException("size: " + size + " <= 0");
         }
 
         components = new double[size];
@@ -15,30 +15,25 @@ public class Vector {
 
     public Vector(Vector vector) {
         this(vector.components);
-
-        vector.components = Arrays.copyOf(vector.components, vector.getSize());
     }
 
     public Vector(double[] array) {
-        if (array.length <= 0) {
-            throw new IllegalArgumentException(array.length + "must be >= 0");
+        if (array.length == 0) {
+            throw new IllegalArgumentException("length: " + array.length + " = 0");
         }
-
-        components = new double[array.length];
 
         components = Arrays.copyOf(array, array.length);
     }
 
     public Vector(int size, double[] array) {
         if (size <= 0) {
-            throw new IllegalArgumentException(size + "must be >= 0");
+            throw new IllegalArgumentException("size: " + size + " <= 0");
         }
 
-        assert false;
         if (array.length < size) {
-            components = Arrays.copyOf(components, getSize());
+            components = Arrays.copyOf(components, components.length);
         } else {
-            components = Arrays.copyOf(components, array.length);
+            components = Arrays.copyOf(components, size);
         }
 
     }
@@ -61,60 +56,55 @@ public class Vector {
         return stringBuilder.toString();
     }
 
-    public double getComponents(int index) {
-        if (index < 0 || index > components.length) {
-            throw new ArrayIndexOutOfBoundsException();
+    public double getComponent(int index) {
+        if (index > components.length) {
+            throw new IndexOutOfBoundsException("index: " + index + " > components.length");
         }
+
         return components[index];
     }
 
-    public void setComponents(int index, double value) {
-        if (index > 0 || index < components.length) {
-            components[index] = value;
-        } else {
-            components = Arrays.copyOf(components, index);
+    public void setComponent(int index, double value) {
+        if (index > components.length) {
+            throw new IndexOutOfBoundsException("index: " + index + " > components.length");
         }
+
+        components[index] = value;
     }
+
 
     public void add(Vector vector) {
-        if (this.getSize() < vector.getSize()) {
-            vector.components = Arrays.copyOf(vector.components, vector.getSize());
+        if (components.length < vector.components.length) {
+            components = Arrays.copyOf(components, components.length);
         }
-
-        double[] result = new double[vector.getSize()];
-
-        for (int i = 0; i < vector.getSize(); i++) {
-            result[i] = components[i] + vector.components[i];
-        }
-
-    }
-
-    public void subtraction(Vector vector) {
-        if (this.getSize() < vector.getSize()) {
-            vector.components = Arrays.copyOf(vector.components, vector.getSize());
-        }
-
-        double[] result = new double[vector.getSize()];
-
-        for (int i = 0; i < vector.getSize(); i++) {
-            result[i] = components[i] - vector.components[i];
-        }
-    }
-
-    public void multiplyScalar(double scalar) {
-        double[] result = new double[getSize()];
 
         for (int i = 0; i < components.length; i++) {
-            result[i] = scalar * components[i];
+            components[i] = components[i] + vector.components[i];
         }
     }
 
-    public void vectorReversal() {
-        multiplyScalar(-1.0);
+    public void subtract(Vector vector) {
+        if (components.length < vector.components.length) {
+            components = Arrays.copyOf(components, components.length);
+        }
+
+        for (int i = 0; i < components.length; i++) {
+            components[i] = components[i] - vector.components[i];
+        }
     }
 
-    public double getVectorLength() {
-        return components.length;
+    public void multiplyByScalar(double scalar) {
+        for (int i = 0; i < components.length; i++) {
+            components[i] = scalar * components[i];
+        }
+    }
+
+    public void getReversal() {
+        multiplyByScalar(-1.0);
+    }
+
+    public int getLength() {
+        return getSize();
     }
 
     @Override
@@ -141,40 +131,28 @@ public class Vector {
     }
 
     public static Vector getSum(Vector vector1, Vector vector2) {
-        if (vector1.getSize() < 0 || vector2.getSize() < 0) {
-            throw new IllegalArgumentException(vector1.getSize() + "or" + vector2.getSize() + "must be >= 0");
-        }
+        Vector result = new Vector(vector1);
 
-        Vector result = new Vector(vector1.getSize());
-
-        vector2.add(vector1);
+        result.add(vector2);
 
         return result;
     }
 
     public static Vector getDifference(Vector vector1, Vector vector2) {
-        if (vector1.getSize() < 0 || vector2.getSize() < 0) {
-            throw new IllegalArgumentException(vector1.getSize() + "or" + vector2.getSize() + "must be >= 0");
-        }
+        Vector result = new Vector(vector1);
 
-        Vector result = new Vector(vector1.getSize());
-
-        result.subtraction(vector2);
+        result.subtract(vector2);
 
         return result;
     }
 
-    public static Vector getScalarProduct(Vector vector1, Vector vector2) {
-        if (vector1.getSize() < 0 || vector2.getSize() < 0) {
-            throw new IllegalArgumentException(vector1.getSize() + "or" + vector2.getSize() + "must be >= 0");
+    public static int getScalarProduct(Vector vector1, Vector vector2) {
+        double result = 0;
+
+        for (int i = 0; i < vector1.components.length; i++) {
+            result += vector1.components[i] * vector2.components[i];
         }
 
-        Vector result = new Vector(vector1.getSize());
-
-        for (int i = 0; i < vector1.getSize(); i++) {
-            result.components[i] += vector1.components[i] * vector2.components[i];
-        }
-
-        return result;
+        return (int) result;
     }
 }
