@@ -20,37 +20,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add files Vector, VectorMain">
-      <change afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/list_item/ListItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ArrayListHome/META-INF/ArrayListHome.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/List/META-INF/List.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Range/META-INF/Range.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shape/META-INF/Shape.kotlin_module" afterDir="false" />
+    <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ArrayList/ArrayList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome/ArrayListHome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singlylinkedlist/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/kaminskiy/range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/oopcourse/kaminskiy/range/Range.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/kaminskiy/range_main/RangeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Range/src/ru/oopcourse/kaminskiy/range_main/RangeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/range/Range.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/range/RangeMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/range1/Range.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Range/src/ru/oopcourse/range1/RangeMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Shape/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/AreaComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/PerimeterComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shape/src/ru/oopcourse/kaminskiy/shape_main/ShapeMain/ShapeMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/ShapesMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Shapes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/oopcourse/shapes/kaminskiy/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vecor_main/VectorMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector_main/VectorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector_main/VectorMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +57,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="Application.SinglyLinkedListMain">
+  <component name="RunManager" selected="Application.ArrayListMain">
     <configuration name="ArrayListHomeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.arraylisthome_main.ArrayListHomeMain" />
       <module name="ArrayListHome" />
@@ -96,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RangeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.range_main.RangeMain" />
-      <module name="Range" />
+    <configuration name="ArrayListMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.array_list_main.ArrayListMain" />
+      <module name="ArrayList" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.oopcourse.kaminskiy.range_main.*" />
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.array_list_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayListMain" />
         <item itemvalue="Application.SinglyLinkedListMain" />
         <item itemvalue="Application.VectorMain (1)" />
         <item itemvalue="Application.ArrayListHomeMain" />
         <item itemvalue="Application.ShapeMain (1)" />
-        <item itemvalue="Application.RangeMain" />
       </list>
     </recent_temporary>
   </component>
@@ -345,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606134669654</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem">
+      <created>1607145544732</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607145544732</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -382,21 +364,26 @@
     <MESSAGE value="Add files SinglyLinkedList" />
     <MESSAGE value="Add files Circle, Rectangle, Square, Triangle, ShapeMain" />
     <MESSAGE value="Add files Range, RangeMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files Range, RangeMain" />
+    <MESSAGE value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1607144188897" />
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1607829710467">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1607829710467" />
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604582974785">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1604582974785" />
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1606134665471">
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1607145536660">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1606134665471" />
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1607145536660" />
     <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -405,30 +392,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604411647999" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1607144757535">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1607829967451">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1607144757535" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1607144757535">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
+    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1607829967451">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1607144757535" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1607144757535">
+    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
+    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1607829967451">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1607144757535" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1607144757535">
+    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1607829967451">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1607144757535" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1601556723948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601556723948" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1606134674307">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1607145571958">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1606134674307" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1607145571958" />
     <state x="616" y="208" key="chooseDestDirectoryDialog" timestamp="1606134308769">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -437,9 +424,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="506" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860@0.0.1600.860" timestamp="1601557510068" />
-    <state x="182" y="50" key="new project wizard" timestamp="1605867737953">
+    <state x="182" y="50" key="new project wizard" timestamp="1607829320697">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1605867737953" />
+    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1607829320697" />
   </component>
 </project>
