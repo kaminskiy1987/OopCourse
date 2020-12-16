@@ -15,17 +15,17 @@ public class VectorMain {
         System.out.println("vector1Size = " + vector1.getSize());
         System.out.println("vector2Size = " + vector2.getSize());
 
-        System.out.println("Component = " + vector1.getComponent(2));
-        vector1.setComponent(2,3.0);
+        System.out.println("component = " + vector1.getComponent(0));
+        vector1.setComponent(0, 3.0);
 
         vector1.add(vector2);
         vector1.subtract(vector2);
         vector1.multiplyByScalar(10);
-        vector1.getReversal();
+        vector1.reversal();
 
-        System.out.println("Sum = " + Vector.getSum(vector1,vector2));
-        System.out.println("Difference = " + Vector.getDifference(vector1,vector2));
-        System.out.println("ScalarProduct = " + Vector.getScalarProduct(vector1,vector2));
+        System.out.println("sum = " + Vector.getSum(vector1, vector2));
+        System.out.println("difference = " + Vector.getDifference(vector1, vector2));
+        System.out.println("scalarProduct = " + Vector.getScalarProduct(vector1, vector2));
         System.out.println("length = " + vector1.getLength());
 
         System.out.println(vector1.equals(vector2));

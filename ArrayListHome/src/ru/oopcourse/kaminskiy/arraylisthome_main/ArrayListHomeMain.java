@@ -7,18 +7,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayListHomeMain {
-    public static ArrayList<String> readFile() throws FileNotFoundException {
-        ArrayList<String> list1 = new ArrayList<>();
+    public static ArrayList<String> getLinesOfFile(ArrayList<String> list) {
         try (Scanner scanner = new Scanner(new File("input2.txt"))) {
             while (scanner.hasNextLine()) {
-                list1.add(scanner.nextLine());
+                list.add(scanner.nextLine());
             }
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не найден: " + e.getMessage());
         }
 
-        return list1;
+        return list;
     }
 
-    public static ArrayList<Integer> removeEvenNumbers(ArrayList<Integer> list) {
+    public static void removeEvenNumbers(ArrayList<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) % 2 == 0) {
                 list.remove(i);
@@ -26,12 +27,10 @@ public class ArrayListHomeMain {
                 i--;
             }
         }
-
-        return list;
     }
 
-    public static ArrayList<Integer> getRemoveDuplicates(ArrayList<Integer> list) {
-        ArrayList<Integer> newList = new ArrayList<>(10);
+    public static ArrayList<Integer> getListWithoutDuplicates(ArrayList<Integer> list, int capacity) {
+        ArrayList<Integer> newList = new ArrayList<>(capacity);
 
         for (Integer element : list) {
             if (!newList.contains(element)) {
@@ -42,13 +41,17 @@ public class ArrayListHomeMain {
         return newList;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(12, 24, 63, 24, 15, 12, 121));
 
-        System.out.println("readFile: " + readFile());
+        ArrayList<String> listLines = new ArrayList<>();
 
-        System.out.println("ArrayList  with duplicates: " + getRemoveDuplicates(list));
+        System.out.println("linesFile: " + getLinesOfFile(listLines));
 
-        System.out.println("ArrayList  without EvenNumbers: " + removeEvenNumbers(list));
+        System.out.println("Duplicates in ArrayList: " + getListWithoutDuplicates(list, list.size()));
+
+        removeEvenNumbers(list);
+
+        System.out.println("ArrayList  without EvenNumbers: " + list);
     }
 }

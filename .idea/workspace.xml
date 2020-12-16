@@ -21,11 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ArrayList/ArrayList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector_main/VectorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector_main/VectorMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607145544732</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add files ArrayList, ArrayListMain">
+      <created>1607830274236</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607830274236</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -365,7 +371,8 @@
     <MESSAGE value="Add files Circle, Rectangle, Square, Triangle, ShapeMain" />
     <MESSAGE value="Add files Range, RangeMain" />
     <MESSAGE value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
+    <MESSAGE value="Add files ArrayList, ArrayListMain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files ArrayList, ArrayListMain" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
@@ -380,10 +387,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1604582974785" />
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1607145536660">
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1607830268873">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1607145536660" />
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1607830268873" />
     <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -392,30 +399,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604411647999" />
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1607829967451">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1607830490945">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
-    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1607829967451">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1607830490945" />
+    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1607830490945">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
-    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1607829967451">
+    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1607830490945" />
+    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1607830490945">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
-    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1607829967451">
+    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1607830490945" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1607830490945">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1607829967451" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1607830490945" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1601556723948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601556723948" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1607145571958">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1607830287586">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1607145571958" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1607830287586" />
     <state x="616" y="208" key="chooseDestDirectoryDialog" timestamp="1606134308769">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
