@@ -1,15 +1,15 @@
-package ru.oopcourse.kaminskiy.list_item;
+package ru.oopcourse.kaminskiy.singly_linked_list;
 
-public class ListItem<T> {
-    public T data;
-    public ListItem<T> next;
+class ListItem<T> {
+    private T data;
+    private ListItem<T> next;
 
-    public ListItem(T data, ListItem<T> next) {
+    public ListItem( T data, ListItem<T> next){
         this.data = data;
         this.next = next;
     }
 
-    public ListItem(T data) {
+    public ListItem( T data){
         this.data = data;
         this.next = null;
     }
