@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class ArrayListHomeMain {
     public static ArrayList<String> getFileLines(String fileName) {
         ArrayList<String> newList = new ArrayList<>();
+        
         try (Scanner scanner = new Scanner(new File(fileName))) {
             while (scanner.hasNextLine()) {
                 newList.add(scanner.nextLine());
