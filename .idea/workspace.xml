@@ -21,9 +21,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BinarySearchTree/BinarySearchTree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinarySearchTree/src/ru/oopcourse/kaminskiy/binary_search_tree/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinarySearchTree/src/ru/oopcourse/kaminskiy/binary_search_tree/BinarySearchTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinarySearchTree/src/ru/oopcourse/kaminskiy/binary_search_tree_main/BinarySearchTreeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +59,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="Application.ArrayListMain">
+  <component name="RunManager" selected="Application.ArrayListHomeMain">
     <configuration name="ArrayListHomeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.arraylisthome_main.ArrayListHomeMain" />
       <module name="ArrayListHome" />
@@ -82,12 +86,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShapeMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.shape_main.ShapeMain" />
-      <module name="Shape" />
+    <configuration name="BinarySearchTreeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.binary_search_tree_main.BinarySearchTreeMain" />
+      <module name="BinarySearchTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.oopcourse.kaminskiy.shape_main.*" />
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.binary_search_tree_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayListHomeMain" />
+        <item itemvalue="Application.BinarySearchTreeMain" />
         <item itemvalue="Application.ArrayListMain" />
         <item itemvalue="Application.SinglyLinkedListMain" />
         <item itemvalue="Application.VectorMain (1)" />
-        <item itemvalue="Application.ArrayListHomeMain" />
-        <item itemvalue="Application.ShapeMain (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608307453287</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add files ArrayList, ArrayListMain">
+      <created>1608735930681</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608735930681</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,10 +395,10 @@
     <MESSAGE value="Add files Circle, Rectangle, Square, Triangle, ShapeMain" />
     <MESSAGE value="Add files Range, RangeMain" />
     <MESSAGE value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
-    <MESSAGE value="Add files ArrayList, ArrayListMain" />
     <MESSAGE value="Add files Vector, VectorMain, ArrayListHomeMain" />
     <MESSAGE value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain" />
+    <MESSAGE value="Add files ArrayList, ArrayListMain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files ArrayList, ArrayListMain" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
@@ -402,10 +413,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1604582974785" />
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1608307442691">
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1608735921183">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608307442691" />
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608735921183" />
     <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -414,30 +425,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604411647999" />
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1608307565275">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1608737033593">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608307565275" />
-    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1608307565275">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608737033593" />
+    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1608737033593">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608307565275" />
-    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1608307565274">
+    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608737033593" />
+    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1608737033593">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608307565274" />
-    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1608307565275">
+    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608737033593" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1608737033593">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608307565275" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608737033593" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1601556723948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601556723948" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1608307467972">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1608735941979">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608307467972" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608735941979" />
     <state x="616" y="208" key="chooseDestDirectoryDialog" timestamp="1606134308769">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -446,9 +457,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="506" y="218" key="git4idea.merge.GitPullDialog/0.0.1600.860@0.0.1600.860" timestamp="1601557510068" />
-    <state x="182" y="50" key="new project wizard" timestamp="1607829320697">
+    <state x="182" y="50" key="new project wizard" timestamp="1608955236252">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1607829320697" />
+    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1608955236252" />
   </component>
 </project>

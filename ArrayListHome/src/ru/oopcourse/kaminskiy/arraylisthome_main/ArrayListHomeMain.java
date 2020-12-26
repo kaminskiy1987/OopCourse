@@ -7,16 +7,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayListHomeMain {
-    public static ArrayList<String> getLinesOfFile(ArrayList<String> list) {
-        try (Scanner scanner = new Scanner(new File("input2.txt"))) {
+    public static ArrayList<String> getFileLines(String fileName) {
+        ArrayList<String> newList = new ArrayList<>();
+        try (Scanner scanner = new Scanner(new File(fileName))) {
             while (scanner.hasNextLine()) {
-                list.add(scanner.nextLine());
+                newList.add(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден: " + e.getMessage());
+            System.out.println("File not found: " + e.getMessage());
         }
 
-        return list;
+        return newList;
     }
 
     public static void removeEvenNumbers(ArrayList<Integer> list) {
@@ -29,8 +30,8 @@ public class ArrayListHomeMain {
         }
     }
 
-    public static ArrayList<Integer> getListWithoutDuplicates(ArrayList<Integer> list, int capacity) {
-        ArrayList<Integer> newList = new ArrayList<>(capacity);
+    public static ArrayList<Integer> getListWithoutDuplicates(ArrayList<Integer> list) {
+        ArrayList<Integer> newList = new ArrayList<>(list.size());
 
         for (Integer element : list) {
             if (!newList.contains(element)) {
@@ -44,11 +45,11 @@ public class ArrayListHomeMain {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(12, 24, 63, 24, 15, 12, 121));
 
-        ArrayList<String> listLines = new ArrayList<>();
+        String fileName = "input2.txt";
 
-        System.out.println("linesFile: " + getLinesOfFile(listLines));
+        System.out.println("fileLines: " + getFileLines(fileName));
 
-        System.out.println("Duplicates in ArrayList: " + getListWithoutDuplicates(list, list.size()));
+        System.out.println("Duplicates in ArrayList: " + getListWithoutDuplicates(list));
 
         removeEvenNumbers(list);
 
