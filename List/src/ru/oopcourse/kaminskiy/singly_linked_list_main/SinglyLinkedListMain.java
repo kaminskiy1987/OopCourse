@@ -4,52 +4,43 @@ import ru.oopcourse.kaminskiy.singly_linked_list.SinglyLinkedList;
 
 public class SinglyLinkedListMain {
     public static void main(String[] args) {
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
 
-        //noinspection unchecked
-        singlyLinkedList.addFirst(20);
+        list.addFirst(20);
+        list.addFirst(24);
+        list.addFirst(63);
+        list.addFirst(25);
+        list.addFirst(15);
+        list.addFirst(121);
 
-        //noinspection unchecked
-        singlyLinkedList.addFirst(24);
+        System.out.println("list: " + list);
 
-        //noinspection unchecked
-        singlyLinkedList.addFirst(63);
+        System.out.println("getClone: " + list.getClone());
 
-        //noinspection unchecked
-        singlyLinkedList.addFirst(25);
+        list.reverse();
 
-        //noinspection unchecked
-        singlyLinkedList.addFirst(15);
+        System.out.println("list: " + list);
 
-        //noinspection unchecked
-        singlyLinkedList.addFirst(121);
+        System.out.println("removeByIndex: " + list.removeByIndex(0));
 
-        System.out.println("removeByIndex: " + singlyLinkedList.removeByIndex(0));
+        System.out.println("removeByData: " + list.removeByData(24));
 
-        //noinspection unchecked
-        System.out.println("removeByData: " + singlyLinkedList.removeByData(24));
+        System.out.println("getFirst: " + list.getFirst());
 
-        System.out.println("getFirst: " + singlyLinkedList.getFirst());
+        System.out.println("getCount: " + list.getCount());
 
-        System.out.println("getLengthList: " + singlyLinkedList.getLengthList());
+        System.out.println("isEmpty: " + list.isEmpty());
 
-        System.out.println("isEmpty: " + singlyLinkedList.isEmpty());
+        System.out.println("getByIndex: " + list.getByIndex(0));
 
-        System.out.println("getByIndex: " + singlyLinkedList.getByIndex(0));
+        list.addLast(12);
 
-        //noinspection unchecked
-        singlyLinkedList.addLast(12);
+        System.out.println("list: " + list);
 
-        //noinspection unchecked
-        singlyLinkedList.addByIndex(1, 33);
+        System.out.println("addByIndex: " + list.addByIndex(1, 33));
 
-        //noinspection unchecked
-        System.out.println("removeByData: " + singlyLinkedList.removeByData(1));
+        System.out.println("removeByData: " + list.removeByData(1));
 
-        System.out.println("removeFirst: " + singlyLinkedList.removeFirst());
-
-        System.out.println("getClone: " + singlyLinkedList.getClone());
-
-        singlyLinkedList.reverse();
+        System.out.println("removeFirst: " + list.removeFirst());
     }
 }
