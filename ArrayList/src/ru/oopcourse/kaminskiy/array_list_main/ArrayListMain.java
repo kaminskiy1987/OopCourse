@@ -2,81 +2,61 @@ package ru.oopcourse.kaminskiy.array_list_main;
 
 import ru.oopcourse.kaminskiy.array_list.ArrayList;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayListMain {
-    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-        ArrayList arrayList = new ArrayList<>(6);
-        //noinspection unchecked
+        ArrayList<Integer> arrayList = new ArrayList<>(10);
         arrayList.add(1);
-        //noinspection unchecked
         arrayList.add(5);
         arrayList.add(14);
         arrayList.add(9);
-        arrayList.add("a");
-        arrayList.add("b");
-        arrayList.add("c");
+        arrayList.add(9);
 
-        ArrayList arrayList1 = new ArrayList<>(6);
-        arrayList1.add(1);
-        arrayList1.add(5);
-        arrayList1.add(14);
-        arrayList1.add(9);
+        ArrayList<String> arrayList1 = new ArrayList<>(10);
         arrayList1.add("a");
         arrayList1.add("b");
-        arrayList1.add("t");
-        arrayList1.add("t");
-        arrayList1.add("t");
+        arrayList1.add("c");
+        arrayList1.add("a");
+        arrayList1.add("b");
+        arrayList1.add("c");
+        arrayList1.add("a");
+        arrayList1.add("b");
+        arrayList1.add("c");
 
-        Object[] array = arrayList.toArray();
+        ArrayList<String> arrayList2 = new ArrayList<>(10);
+        arrayList2.add("a");
+        arrayList2.add("a");
+        arrayList2.add("a");
+        arrayList2.add("a");
+        arrayList2.add("a");
+        arrayList2.add("b");
+        arrayList2.add("t");
+        arrayList2.add("t");
+        arrayList2.add("t");
 
-        System.out.println("arrayList : " + Arrays.toString(arrayList.toArray()));
-        System.out.println("arrayList : " + Arrays.toString(arrayList1.toArray()));
+        ArrayList<Integer> arrayList3 = new ArrayList<>(10);
+        arrayList3.add(1);
+        arrayList3.add(5);
+        arrayList3.add(14);
+        arrayList3.add(9);
 
-        System.out.println("addAll(collection) : " + arrayList1.addAll(arrayList));
-        System.out.println("arrayList1 : " + Arrays.toString(arrayList1.toArray()));
+        System.out.println("arrayList : " + arrayList);
+        System.out.println("arrayList1 : " + arrayList1);
 
-        System.out.println("addAll(index, collection) : " + arrayList1.addAll(1, arrayList));
-        System.out.println("arrayList1 : " + Arrays.toString(arrayList1.toArray()));
+        System.out.println("addAll(collection) : " + arrayList1.addAll(arrayList2));
+        System.out.println("arrayList1 : " + arrayList1);
 
-        System.out.println("removeAll : " + arrayList1.removeAll(arrayList));
-        System.out.println("arrayList1 : " + Arrays.toString(arrayList1.toArray()));
+        System.out.println("addAll(index, collection) : " + arrayList1.addAll(1, arrayList2));
+        System.out.println("arrayList2 : " + arrayList1);
 
-        System.out.println("retainAll : " + arrayList1.retainAll(arrayList));
-        System.out.println("arrayList1 : " + Arrays.toString(arrayList1.toArray()));
+        System.out.println("removeAll : " + arrayList.removeAll(arrayList3));
+        System.out.println("arrayList3 : " + arrayList);
 
-        System.out.println("set : " + arrayList.set(2, 12));
-        System.out.println("get : " + arrayList.get(3));
-        System.out.println("size : " + arrayList.size());
-        System.out.println("size : " + arrayList1.size());
-        System.out.println("isEmpty : " + arrayList.isEmpty());
-        System.out.println("remove : " + arrayList.remove(2));
-        System.out.println("remove(boolean) : " + arrayList.remove("a"));
-        System.out.println("indexOf : " + arrayList.indexOf("b"));
-        System.out.println("lastIndexOf : " + arrayList.lastIndexOf("b"));
-        System.out.println("contains : " + arrayList.contains("w"));
-        System.out.println("containsAll : " + arrayList1.containsAll(arrayList));
-        System.out.println("toArray : " + Arrays.toString(arrayList.toArray(array)));
+        System.out.println("retainAll : " + arrayList.retainAll(arrayList3));
+        System.out.println("arrayList4 : " + arrayList);
 
-        arrayList.ensureCapacity(20);
-        arrayList.add(4);
-        arrayList.add(4);
-        arrayList.add(4);
-        arrayList.add(5);
-        System.out.println("arrayList : " + Arrays.toString(arrayList.toArray()));
-
-        arrayList.trimToSize();
-        System.out.println("arrayList : " + Arrays.toString(arrayList.toArray()));
-
-        arrayList.add(4);
-        arrayList.clear();
-
-        arrayList.add(14);
-        System.out.println("get : " + arrayList.get(0));
-
-        ArrayList strings = new ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
         strings.add("q");
         strings.add("w");
         strings.add("a");
@@ -85,12 +65,48 @@ public class ArrayListMain {
         Iterator<String> iterator = strings.iterator();
         while (iterator.hasNext()) {
             String s = iterator.next();
-
-            if (s.equals("w")) {
-                iterator.hasNext();
+            if (s.equals("r")) {
+                System.out.println("r");
             } else {
                 System.out.println(s);
             }
         }
+
+        System.out.println("set : " + arrayList.set(2, 12));
+        System.out.println("get : " + arrayList.get(3));
+        System.out.println("size : " + arrayList.size());
+        System.out.println("size : " + arrayList1.size());
+        System.out.println("isEmpty : " + arrayList.isEmpty());
+        System.out.println("remove : " + arrayList.remove(2));
+        System.out.println("arrayList : " + arrayList);
+
+        System.out.println("remove(boolean) : " + arrayList1.remove("a"));
+        System.out.println("arrayList1 : " + arrayList1);
+
+        System.out.println("indexOf : " + arrayList1.indexOf("b"));
+        System.out.println("arrayList1 : " + arrayList1);
+
+        System.out.println("lastIndexOf : " + arrayList1.lastIndexOf(null));
+        System.out.println("arrayList1 : " + arrayList1);
+
+        System.out.println("contains : " + arrayList1.contains("w"));
+        System.out.println("arrayList : " + arrayList1);
+
+        arrayList.ensureCapacity(10);
+        System.out.println("arrayList2 : " + arrayList);
+        arrayList.add(4);
+        arrayList.add(4);
+        arrayList.add(4);
+        arrayList.add(5);
+
+        System.out.println("arrayList3 : " + arrayList);
+
+        arrayList.trimToSize();
+        System.out.println("arrayList4 : " + arrayList);
+
+        arrayList.clear();
+        arrayList.add(14);
+
+        System.out.println("get : " + arrayList.get(0));
     }
 }

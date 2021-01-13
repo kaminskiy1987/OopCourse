@@ -25,11 +25,6 @@
       <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/ListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/ListItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector_main/VectorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/oopcourse/kaminskiy/vector_main/VectorMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +56,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="Application.VectorMain (1)">
+  <component name="RunManager" selected="Application.ArrayListMain">
     <configuration name="ArrayListHomeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.arraylisthome_main.ArrayListHomeMain" />
       <module name="ArrayListHome" />
@@ -129,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayListMain" />
         <item itemvalue="Application.VectorMain (1)" />
         <item itemvalue="Application.SinglyLinkedListMain" />
         <item itemvalue="Application.ArrayListHomeMain" />
         <item itemvalue="Application.BinarySearchTreeMain" />
-        <item itemvalue="Application.ArrayListMain" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608735930681</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain, Vector, VectorMain">
+      <created>1610454224953</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1610454224953</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -400,7 +402,8 @@
     <MESSAGE value="Add files Vector, VectorMain, ArrayListHomeMain" />
     <MESSAGE value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain" />
     <MESSAGE value="Add files ArrayList, ArrayListMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files ArrayList, ArrayListMain" />
+    <MESSAGE value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain, Vector, VectorMain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain, Vector, VectorMain" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
@@ -415,10 +418,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1604582974785" />
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1608735921183">
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1610454220462">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608735921183" />
+    <state x="454" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610454220462" />
     <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -431,26 +434,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1610449738353" />
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1609779930247">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1610454442879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609779930247" />
-    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1609779930247">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1610454442879" />
+    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1610454442878">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609779930247" />
-    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1609779930247">
+    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1610454442878" />
+    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1610454442878">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609779930247" />
-    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1609779930247">
+    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1610454442878" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1610454442879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609779930247" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1608735941979">
+    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1610454442879" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1610454234236">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608735941979" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1610454234236" />
     <state x="616" y="208" key="chooseDestDirectoryDialog" timestamp="1606134308769">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
