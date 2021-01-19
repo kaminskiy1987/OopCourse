@@ -7,8 +7,8 @@ public class VectorMain {
         double[] array1 = {1.0, 2.0, 3.0, 4.0};
         double[] array2 = {5.0, 2.0, 4.0, 1.0};
 
-        Vector vector1 = new Vector(array1);
-        Vector vector2 = new Vector(array2);
+        Vector vector1 = new Vector(7, array1);
+        Vector vector2 = new Vector(7, array2);
 
         System.out.println("vector1= " + vector1);
         System.out.println("vector2= " + vector2);

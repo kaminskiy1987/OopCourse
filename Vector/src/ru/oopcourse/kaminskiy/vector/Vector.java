@@ -53,7 +53,7 @@ public class Vector {
 
     public double getComponent(int index) {
         if (index < 0 || index >= components.length) {
-            throw new IndexOutOfBoundsException("index out of bounds : " + index + " < 0 or " + index + " > " + components.length);
+            throw new IndexOutOfBoundsException("index in range: " + index + " < 0 or " + index + " > " + components.length);
         }
 
         return components[index];
@@ -61,7 +61,7 @@ public class Vector {
 
     public void setComponent(int index, double value) {
         if (index < 0 || index >= components.length) {
-            throw new IndexOutOfBoundsException("index out of bounds : " + index + " < 0 or " + index + " > " + components.length);
+            throw new IndexOutOfBoundsException("index in range: " + index + " < 0 or " + index + " > " + components.length);
         }
 
         components[index] = value;
@@ -74,7 +74,6 @@ public class Vector {
 
         for (int i = 0; i < components.length; i++) {
             components[i] += vector.components[i];
-
         }
     }
 
@@ -122,7 +121,7 @@ public class Vector {
             return true;
         }
 
-        if (o == null || o.getClass() != this.getClass()) {
+        if (o == null || o.getClass() != getClass()) {
             return false;
         }
 
@@ -148,10 +147,6 @@ public class Vector {
     }
 
     public static double getScalarProduct(Vector vector1, Vector vector2) {
-        if (vector1.components.length != vector2.components.length) {
-            throw new IllegalArgumentException("Vectors are different lengths");
-        }
-
         double result = 0;
 
         for (int i = 0; i < vector1.components.length; i++) {
