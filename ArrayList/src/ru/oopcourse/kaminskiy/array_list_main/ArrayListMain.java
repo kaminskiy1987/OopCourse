@@ -39,7 +39,8 @@ public class ArrayListMain {
         arrayList3.add(1);
         arrayList3.add(5);
         arrayList3.add(14);
-        arrayList3.add(9);
+        arrayList3.add(11);
+        arrayList.add(10);
 
         System.out.println("arrayList : " + arrayList);
         System.out.println("arrayList1 : " + arrayList1);
@@ -65,19 +66,19 @@ public class ArrayListMain {
         Iterator<String> iterator = strings.iterator();
         while (iterator.hasNext()) {
             String s = iterator.next();
-            if (s.equals("r")) {
+            if (s.equals("q")) {
                 System.out.println("r");
             } else {
                 System.out.println(s);
             }
         }
 
-        System.out.println("set : " + arrayList.set(2, 12));
-        System.out.println("get : " + arrayList.get(3));
+        System.out.println("set : " + arrayList.set(0, 12));
+        System.out.println("get : " + arrayList.get(1));
         System.out.println("size : " + arrayList.size());
         System.out.println("size : " + arrayList1.size());
         System.out.println("isEmpty : " + arrayList.isEmpty());
-        System.out.println("remove : " + arrayList.remove(2));
+        System.out.println("remove : " + arrayList.remove(1));
         System.out.println("arrayList : " + arrayList);
 
         System.out.println("remove(boolean) : " + arrayList1.remove("a"));

@@ -25,27 +25,32 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        checkIndex(index);
+        checkElementIndex(index);
 
         return items[index];
     }
 
+
     @Override
     public T set(int index, T item) {
-        checkIndex(index);
+        checkElementIndex(index);
 
-        T oldValue = items[index];
+        T oldItem = items[index];
         items[index] = item;
 
-        return oldValue;
+        return oldItem;
     }
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
+        if (items == null) {
+            return stringBuilder.toString();
+        }
+
         stringBuilder.append("{");
 
-        for (int i = 0; i < size(); i++) {
+        for (int i = 0; i < size; i++) {
             stringBuilder.append(items[i]).append(", ");
         }
 
@@ -54,22 +59,33 @@ public class ArrayList<T> implements List<T> {
         return stringBuilder.toString();
     }
 
-    private void checkIndex(int index) {
-        if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("index out of bounds : " + index + " < 0 or > " + size);
+    private void checkPositionIndex(int index) {
+        if (!(index >= 0 && index <= size)) {
+            throw new IndexOutOfBoundsException("index in range: " + index + " < 0 or >= " + size);
+
+        }
+    }
+
+    private void checkElementIndex(int index) {
+        if (!(index >= 0 && index < size)) {
+            throw new IndexOutOfBoundsException("index in range: " + index + " < 0 or > " + size);
         }
     }
 
     public void ensureCapacity(int newCapacity) {
-        modCount++;
         if (newCapacity >= items.length) {
-            items = Arrays.copyOf(items, newCapacity);
+            int increasedCapacity = (items.length * 3) / 2 + 1;
+
+            if (increasedCapacity < newCapacity) {
+                increasedCapacity = newCapacity;
+            }
+
+            items = Arrays.copyOf(items, increasedCapacity);
         }
+
     }
 
     public void trimToSize() {
-        modCount++;
-
         if (size < items.length) {
             items = Arrays.copyOf(items, size);
         }
@@ -99,8 +115,6 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public void clear() {
-        modCount++;
-
         for (int i = 0; i < size; i++) {
             items[i] = null;
         }
@@ -110,7 +124,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public void add(int index, T item) {
-        checkIndex(index);
+        checkPositionIndex(index);
 
         modCount++;
 
@@ -118,11 +132,13 @@ public class ArrayList<T> implements List<T> {
             ensureCapacity(DEFAULT_CAPACITY);
         }
 
-        if (size > items.length) {
-            items = Arrays.copyOf(items, size);
+        if (size == items.length) {
+            ensureCapacity(size * 2 + 1);
         }
 
-        System.arraycopy(items, index + 1, items, index + 1, size - index);
+        if (size > index) {
+            System.arraycopy(items, index, items, index + 1, size - index);
+        }
 
         items[index] = item;
 
@@ -131,13 +147,13 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T remove(int index) {
-        checkIndex(index);
+        checkElementIndex(index);
 
         modCount++;
 
-        T item = items[index];
+        T removedItem = items[index];
 
-        if (size >= index + 1) {
+        if (size > index) {
             System.arraycopy(items, index + 1, items, index, size - 1 - index);
         }
 
@@ -145,13 +161,13 @@ public class ArrayList<T> implements List<T> {
 
         size--;
 
-        return item;
+        return removedItem;
     }
 
     @Override
     public int indexOf(Object o) {
         for (int i = 0; i < size; i++) {
-            if (items[i].equals(o) || o == null) {
+            if (Objects.equals(o, items[i])) {
                 return i;
             }
         }
@@ -162,7 +178,7 @@ public class ArrayList<T> implements List<T> {
     @Override
     public int lastIndexOf(Object o) {
         for (int i = size - 1; i >= 0; i--) {
-            if (items[i].equals(o) || o == null) {
+            if (Objects.equals(o, items[i])) {
                 return i;
             }
         }
@@ -182,7 +198,7 @@ public class ArrayList<T> implements List<T> {
 
     private class ArrayListIterator implements Iterator<T> {
         int currentIndex = -1;
-        int iteratorModCount = modCount;
+        final int iteratorModCount = modCount;
 
         @Override
         public boolean hasNext() {
@@ -195,20 +211,13 @@ public class ArrayList<T> implements List<T> {
                 throw new ConcurrentModificationException("The Collection changed during the crawl");
             }
 
-            if (currentIndex >= size) {
+            if (!hasNext()) {
                 throw new NoSuchElementException("There is no such element");
-            }
-
-            Object[] elementData = ArrayList.this.items;
-
-            if (currentIndex >= elementData.length) {
-                throw new ConcurrentModificationException("The Collection changed during the crawl");
             }
 
             currentIndex++;
 
-            //noinspection unchecked
-            return (T) elementData[currentIndex];
+            return ArrayList.this.items[currentIndex];
         }
     }
 
@@ -254,65 +263,60 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public boolean addAll(Collection<? extends T> c) {
-        addAll(size, c);
+        return addAll(size, c);
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends T> c) {
+        if (c == null) {
+            return false;
+        }
+
+        checkPositionIndex(index);
+
+        modCount++;
+
+        if (c.size() + size > items.length) {
+            ensureCapacity(size + c.size());
+        }
+
+        if (size > 0 && index != size) {
+            System.arraycopy(items, index, items, index + c.size(), size - index);
+        }
+
+        System.arraycopy(c.toArray(), 0, items, index, c.size());
+
+        size += c.size();
+
+        return c.size() != 0;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        if (c == null) {
+            return false;
+        }
+
+        for (Object e : c) {
+            remove(e);
+        }
 
         return true;
     }
 
     @Override
-    public boolean addAll(int index, Collection<? extends T> c) {
-        checkIndex(index);
-
-        Object[] array = c.toArray();
-
-        ensureCapacity(size + array.length);
-
-        if (size > index) {
-            System.arraycopy(items, index, items, index + array.length, size - index);
-        }
-
-        System.arraycopy(array, 0, items, index, array.length);
-        size += array.length;
-
-        return array.length != 0;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        Object[] array = c.toArray();
-        boolean isRemove = false;
-
-        for (int i = 0; i < size; i++) {
-            if (c.contains(array)) {
-                remove(array);
-                isRemove = true;
-
-                i--;
-            }
-        }
-
-        return isRemove;
-    }
-
-    @Override
     public boolean retainAll(Collection<?> c) {
-        Object[] array = items;
-        boolean isRemove = true;
+        if (c == null) {
+            return false;
+        }
 
-        for (int i = 0; i < size; i++) {
-            if (!c.contains(array[i])) {
-                remove(array[i]);
-                isRemove = true;
-
-                i--;
-            }
-
-            if (size == 0) {
-                isRemove = false;
+        for (Object e : c) {
+            if (!c.contains(e)) {
+                remove(e);
             }
         }
 
-        return isRemove;
+        return true;
     }
 
     @Override

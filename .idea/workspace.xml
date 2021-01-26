@@ -22,9 +22,9 @@
   <component name="ChangeListManager">
     <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add files Person, PersonMain">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="Application.SinglyLinkedListMain">
+  <component name="RunManager" selected="Application.ArrayListMain">
     <configuration name="ArrayListHomeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.arraylisthome_main.ArrayListHomeMain" />
       <module name="ArrayListHome" />
@@ -124,10 +124,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayListMain" />
         <item itemvalue="Application.SinglyLinkedListMain" />
         <item itemvalue="Application.VectorMain (1)" />
         <item itemvalue="Application.PersonMain" />
-        <item itemvalue="Application.ArrayListMain" />
         <item itemvalue="Application.ArrayListHomeMain" />
       </list>
     </recent_temporary>
@@ -382,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611055200121</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add files SinglyLinkedList">
+      <created>1611229165529</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1611229165529</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,7 +422,6 @@
     <MESSAGE value="Add files Shape and ShapeMain" />
     <MESSAGE value="Add files Circle, Rectangle, Shape, Square, Triangle, AreaComparator, PerimeterComparator, ShapeMain" />
     <MESSAGE value="Add files ArrayListHome, ArrayListHomeMain" />
-    <MESSAGE value="Add files SinglyLinkedList" />
     <MESSAGE value="Add files Circle, Rectangle, Square, Triangle, ShapeMain" />
     <MESSAGE value="Add files Range, RangeMain" />
     <MESSAGE value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
@@ -425,7 +431,8 @@
     <MESSAGE value="Add files ArrayList, ArrayListMain" />
     <MESSAGE value="Add files Person, PersonMain" />
     <MESSAGE value="Add files Vector, VectorMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files Vector, VectorMain" />
+    <MESSAGE value="Add files SinglyLinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files SinglyLinkedList" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
@@ -456,22 +463,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1610449738353" />
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1611055255094">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1611675431102">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1611055255094" />
-    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1611055255079">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1611675431102" />
+    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1611675431102">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1611055255079" />
-    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1611055255079">
+    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1611675431102" />
+    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1611675431102">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1611055255079" />
-    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1611055255094">
+    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1611675431102" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1611675431102">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1611055255094" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1611675431102" />
     <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1611055206074">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
