@@ -29,11 +29,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return name;
+        return "Имя: " + name + ", Возраст: " + age;
     }
 
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name, age);
     }
 
     @Override
@@ -48,6 +48,6 @@ public class Person {
 
         Person p = (Person) o;
 
-        return Objects.equals(name, p.name);
+        return Objects.equals(name, p.name) && Objects.equals(age, p.age);
     }
 }

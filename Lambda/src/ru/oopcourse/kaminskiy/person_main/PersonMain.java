@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class PersonMain {
     public static void main(String[] args) {
-        List<Person> list = Arrays.asList(
+        List<Person> personsList = Arrays.asList(
                 new Person("Иван", 22),
                 new Person("Сергей", 47),
                 new Person("Петр", 10),
@@ -18,40 +18,45 @@ public class PersonMain {
                 new Person("Иван", 5)
         );
 
-        List<Person> distinctiveNames = list.stream()
+        List<Person> uniquePersons = personsList.stream()
                 .distinct()
                 .collect(Collectors.toList());
 
-        System.out.println("distinctiveNames: " + distinctiveNames);
+        System.out.println("Уникальные персоны: " + uniquePersons);
 
-        String allNamesString = list.stream()
+        String allNamesString = personsList.stream()
                 .map(Person::getName)
-                .collect(Collectors.joining(", "));
+                .distinct()
+                .collect(Collectors.joining(", ", "Имена: ", "."));
 
-        System.out.println("allNamesString: " + allNamesString);
+        System.out.println(allNamesString);
 
-        List<Person> peopleUnder18 = list.stream()
+        List<Person> filteredPersons = personsList.stream()
                 .filter(p -> p.getAge() < 18)
                 .collect(Collectors.toList());
 
-        System.out.println("peopleUnder18: " + peopleUnder18);
+        System.out.println("Персоны до 18 лет: " + filteredPersons);
 
-        OptionalDouble average = peopleUnder18.stream()
-                .mapToDouble(Person::getAge).average();
+        OptionalDouble arithmeticalMean =
+                filteredPersons.stream()
+                        .mapToDouble(Person::getAge)
+                        .average();
 
-        System.out.println("average: " + average);
+        arithmeticalMean.ifPresent(avg -> System.out.println("Средний возраст: " + avg));
 
-        Map<String, List<Person>> personsByName = list.stream()
-                        .collect(Collectors.groupingBy(Person::getName));
+        Map<String, Double> averageAgeByName =
+                personsList.stream()
+                        .collect(Collectors.groupingBy(Person::getName, Collectors.averagingInt(Person::getAge)));
 
-        personsByName.forEach((age, p) ->
-                System.out.printf("name %s: %s%n", average, p));
+        averageAgeByName.forEach((p, age) ->
+                System.out.printf("Имя: %s, Средний возраст: %s %n", p, age));
 
-        List<Person> namesInDescending = list.stream()
-                .filter(p -> p.getAge() > 20 && p.getAge() < 45)
+        String filteredNames = personsList.stream()
+                .filter(p -> p.getAge() >= 20 && p.getAge() <= 45)
                 .sorted((p1, p2) -> p2.getAge() - p1.getAge())
-                .collect(Collectors.toList());
+                .map(Person::getName)
+                .collect(Collectors.joining(", ", "Имена: ", "."));
 
-        System.out.println("namesInDescending: " + namesInDescending);
+        System.out.println(filteredNames);
     }
 }
