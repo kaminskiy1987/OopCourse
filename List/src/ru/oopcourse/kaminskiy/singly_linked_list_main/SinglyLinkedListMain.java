@@ -21,7 +21,7 @@ public class SinglyLinkedListMain {
 
         System.out.println("list: " + list);
 
-        System.out.println("removeByIndex: " + list.removeByIndex(0));
+        System.out.println("removeByIndex: " + list.removeByIndex(2));
 
         System.out.println("removeByData: " + list.removeByData(24));
 
