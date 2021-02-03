@@ -23,8 +23,8 @@
     <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add files Person, PersonMain">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/oopcourse/kaminskiy/singly_linked_list_main/SinglyLinkedListMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person_main/PersonMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person_main/PersonMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
-  <component name="RunManager" selected="Application.SinglyLinkedListMain">
+  <component name="RunManager" selected="Application.PersonMain">
     <configuration name="ArrayListHomeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.arraylisthome_main.ArrayListHomeMain" />
       <module name="ArrayListHome" />
@@ -124,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PersonMain" />
         <item itemvalue="Application.SinglyLinkedListMain" />
         <item itemvalue="Application.VectorMain (1)" />
-        <item itemvalue="Application.PersonMain" />
         <item itemvalue="Application.ArrayListMain" />
         <item itemvalue="Application.ArrayListHomeMain" />
       </list>
@@ -403,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611762650070</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Add files SinglyLinkedList, SinglyLinkedListMain">
+      <created>1612280222062</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1612280222062</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -447,7 +454,8 @@
     <MESSAGE value="Add files SinglyLinkedList" />
     <MESSAGE value="Add files ArrayList, ArrayListMain" />
     <MESSAGE value="Add files Person, PersonMain, Vector, VectorMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files Person, PersonMain, Vector, VectorMain" />
+    <MESSAGE value="Add files SinglyLinkedList, SinglyLinkedListMain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files SinglyLinkedList, SinglyLinkedListMain" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
@@ -462,10 +470,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1604582974785" />
-    <state x="147" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1611762644968">
+    <state x="147" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1612280216030">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="147" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1611762644968" />
+    <state x="147" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1612280216030" />
     <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -478,30 +486,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1610449738353" />
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1612279816074">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1612280858158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1612279816074" />
-    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1612279816073">
+    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
+    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1612280858158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1612279816073" />
-    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1612279816073">
+    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
+    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1612280858158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1612279816073" />
-    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1612279816073">
+    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1612280858158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1612279816073" />
+    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
     <state x="519" y="132" key="RollbackChangesDialog" timestamp="1611761967263">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="519" y="132" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1611761967263" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1611762659440">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1612280227937">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1611762659440" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1612280227937" />
     <state x="616" y="208" key="chooseDestDirectoryDialog" timestamp="1606134308769">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -32,6 +32,7 @@ public class Person {
         return "Имя: " + name + ", Возраст: " + age;
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(name, age);
     }
@@ -48,6 +49,6 @@ public class Person {
 
         Person p = (Person) o;
 
-        return Objects.equals(name, p.name) && Objects.equals(age, p.age);
+        return Objects.equals(name, p.name) && age == p.age;
     }
 }
