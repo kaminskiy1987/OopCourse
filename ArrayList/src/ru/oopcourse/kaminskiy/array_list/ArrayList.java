@@ -42,6 +42,10 @@ public class ArrayList<T> implements List<T> {
     }
 
     public String toString() {
+        if (size == 0) {
+            return ("{}");
+        }
+
         StringBuilder stringBuilder = new StringBuilder();
 
         if (items == null) {
@@ -60,29 +64,24 @@ public class ArrayList<T> implements List<T> {
     }
 
     private void checkPositionIndex(int index) {
-        if (!(index >= 0 && index <= size)) {
-            throw new IndexOutOfBoundsException("index in range: " + index + " < 0 or >= " + size);
-
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " > " + size);
         }
     }
 
     private void checkElementIndex(int index) {
-        if (!(index >= 0 && index < size)) {
-            throw new IndexOutOfBoundsException("index in range: " + index + " < 0 or > " + size);
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " >= " + size);
         }
     }
 
+
     public void ensureCapacity(int newCapacity) {
         if (newCapacity >= items.length) {
-            int increasedCapacity = (items.length * 3) / 2 + 1;
-
-            if (increasedCapacity < newCapacity) {
-                increasedCapacity = newCapacity;
-            }
-
-            items = Arrays.copyOf(items, increasedCapacity);
+            items = Arrays.copyOf(items, newCapacity);
         }
 
+        newCapacity = items.length;
     }
 
     public void trimToSize() {
@@ -120,6 +119,8 @@ public class ArrayList<T> implements List<T> {
         }
 
         size = 0;
+
+        modCount++;
     }
 
     @Override
@@ -133,7 +134,7 @@ public class ArrayList<T> implements List<T> {
         }
 
         if (size == items.length) {
-            ensureCapacity(size * 2 + 1);
+            ensureCapacity(size * 2);
         }
 
         if (size > index) {
@@ -153,9 +154,7 @@ public class ArrayList<T> implements List<T> {
 
         T removedItem = items[index];
 
-        if (size > index) {
-            System.arraycopy(items, index + 1, items, index, size - 1 - index);
-        }
+        System.arraycopy(items, index + 1, items, index, size - 1 - index);
 
         items[size - 1] = null;
 
@@ -217,7 +216,7 @@ public class ArrayList<T> implements List<T> {
 
             currentIndex++;
 
-            return ArrayList.this.items[currentIndex];
+            return items[currentIndex];
         }
     }
 
@@ -239,6 +238,7 @@ public class ArrayList<T> implements List<T> {
             return (T1[]) Arrays.copyOf(items, size, a.getClass());
         }
 
+        //noinspection SuspiciousSystemArraycopy
         System.arraycopy(items, 0, a, 0, size);
 
         if (a.length > size) {
@@ -269,6 +269,10 @@ public class ArrayList<T> implements List<T> {
     @Override
     public boolean addAll(int index, Collection<? extends T> c) {
         if (c == null) {
+            throw new NullPointerException("The Collection is null");
+        }
+
+        if (c.size() == 0) {
             return false;
         }
 
@@ -284,6 +288,7 @@ public class ArrayList<T> implements List<T> {
             System.arraycopy(items, index, items, index + c.size(), size - index);
         }
 
+        //noinspection SuspiciousSystemArraycopy
         System.arraycopy(c.toArray(), 0, items, index, c.size());
 
         size += c.size();
@@ -294,29 +299,45 @@ public class ArrayList<T> implements List<T> {
     @Override
     public boolean removeAll(Collection<?> c) {
         if (c == null) {
+            throw new NullPointerException("The Collection is null");
+        }
+
+        if (c.size() == 0) {
             return false;
         }
 
-        for (Object e : c) {
-            remove(e);
+        boolean isRemoved = false;
+
+        for (Object o : c) {
+            if (c.contains(o)) {
+                remove(o);
+                isRemoved = true;
+            }
         }
 
-        return true;
+        return isRemoved;
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
         if (c == null) {
+            throw new NullPointerException("The Collection is null");
+        }
+
+        if (c.size() == 0) {
             return false;
         }
 
-        for (Object e : c) {
-            if (!c.contains(e)) {
-                remove(e);
+        boolean isRetained = false;
+
+        for (Object o : c) {
+            if (!c.contains(o)) {
+                remove(o);
+                isRetained = true;
             }
         }
 
-        return true;
+        return isRetained;
     }
 
     @Override
