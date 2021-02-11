@@ -16,13 +16,11 @@ public class PersonMain {
                 new Person("Иван", 5)
         );
 
-        String uniqueNames = personsList.stream()
+        personsList.stream()
                 .map(Person::getName)
                 .distinct()
-                .collect(Collectors.joining(", "));
-
-        System.out.println("Уникальные имена: " + uniqueNames);
-
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
 
         String allNamesString = personsList.stream()
                 .map(Person::getName)
