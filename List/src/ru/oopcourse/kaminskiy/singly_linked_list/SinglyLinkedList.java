@@ -24,7 +24,7 @@ public class SinglyLinkedList<T> {
 
     @Override
     public String toString() {
-        if (head == null) {
+        if (count == 0) {
             return "{}";
         }
 
@@ -96,25 +96,22 @@ public class SinglyLinkedList<T> {
 
                 return true;
             }
-
-            removeFirst();
-            return true;
         }
 
-        ListItem<T> nextNode = head.getNext();
-        ListItem<T> previousNode = head;
+        ListItem<T> nextItem = head.getNext();
+        ListItem<T> currentItem = head;
 
-        while (nextNode != null) {
-            if (Objects.equals(nextNode.getData(), data)) {
-                previousNode.setNext(nextNode.getNext());
+        while (nextItem != null) {
+            if (Objects.equals(nextItem.getData(), data)) {
+                currentItem.setNext(nextItem.getNext());
 
                 count--;
 
                 return true;
             }
 
-            previousNode = nextNode;
-            nextNode = nextNode.getNext();
+            currentItem = nextItem;
+            nextItem = nextItem.getNext();
         }
 
         return false;
@@ -128,8 +125,11 @@ public class SinglyLinkedList<T> {
             return removeFirst();
         }
 
-        ListItem<T> currentNode = getListItem(index);
-        currentNode.setNext(currentNode.getNext().getNext());
+        ListItem<T> previousNode = getListItem(index - 1);
+
+        ListItem<T> currentNode = previousNode.getNext();
+
+        previousNode.setNext(currentNode.getNext());
 
         count--;
 
@@ -172,6 +172,16 @@ public class SinglyLinkedList<T> {
         return getListItem(index).getData();
     }
 
+    public T setByIndex(int index, T data) {
+        checkElementIndex(index);
+
+        ListItem<T> currentItem = getListItem(index);
+        T insertedData = currentItem.getData();
+        currentItem.setData(data);
+
+        return insertedData;
+    }
+
     public void reverse() {
         ListItem<T> current = head;
         ListItem<T> previous = null;
@@ -191,15 +201,16 @@ public class SinglyLinkedList<T> {
             return new SinglyLinkedList<>();
         }
 
-        SinglyLinkedList<Integer> clonedList = new SinglyLinkedList<>();
+        SinglyLinkedList<T> clonedList = new SinglyLinkedList<>(head.getData());
         ListItem<T> current = head;
+        ListItem<T> clonedNode = clonedList.head;
 
-        while (current != null) {
-            clonedList.addLast((Integer) current.getData());
+        while (current.getNext() != null) {
             current = current.getNext();
+            clonedNode.setNext(new ListItem<>(current.getData()));
+            clonedNode = clonedNode.getNext();
         }
 
-        //noinspection unchecked
-        return (SinglyLinkedList<T>) clonedList;
+        return clonedList;
     }
 }

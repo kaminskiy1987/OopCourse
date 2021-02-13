@@ -3,9 +3,8 @@ package ru.oopcourse.kaminskiy.binary_search_tree_main;
 import ru.oopcourse.kaminskiy.binary_search_tree.BinarySearchTree;
 
 public class BinarySearchTreeMain {
-    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
 
         binarySearchTree.insertNode(5);
         binarySearchTree.insertNode(4);
@@ -16,15 +15,22 @@ public class BinarySearchTreeMain {
         binarySearchTree.insertNode(21);
         binarySearchTree.insertNode(1);
 
-        //noinspection unchecked
         binarySearchTree.toString(binarySearchTree.root);
         System.out.println();
 
         System.out.println("search: " + binarySearchTree.findNode(66));
-        System.out.println("count: " + binarySearchTree.getCountsElements());
-        System.out.println("removeNode: " + binarySearchTree.removeNode(22));
+
+        System.out.println("count: " + binarySearchTree.getCount());
+
+        binarySearchTree.removeNode(22);
+        binarySearchTree.toString(binarySearchTree.root);
+        System.out.println();
 
         binarySearchTree.widthTraverse();
+        binarySearchTree.toString(binarySearchTree.root);
+        System.out.println();
+
+        binarySearchTree.traversalWithoutRecursion();
         binarySearchTree.toString(binarySearchTree.root);
         System.out.println();
 

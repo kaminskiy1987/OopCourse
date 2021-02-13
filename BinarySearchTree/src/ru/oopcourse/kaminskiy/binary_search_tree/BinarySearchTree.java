@@ -3,19 +3,18 @@ package ru.oopcourse.kaminskiy.binary_search_tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinarySearchTree<T> {
+public class BinarySearchTree<T extends Comparable<T>> {
     public BinarySearchTreeNode<T> root;
+    public int count;
 
     public BinarySearchTree() {
-        this.root = null;
     }
 
-    public BinarySearchTree(BinarySearchTreeNode<T> root) {
-        this.root = root;
+    public BinarySearchTree(T data) {
+        root = new BinarySearchTreeNode<>(data);
     }
 
     public void toString(BinarySearchTreeNode<T> root) {
-
         if (root != null) {
             toString(root.getLeft());
             System.out.print(root.getData() + " ");
@@ -23,69 +22,54 @@ public class BinarySearchTree<T> {
         }
     }
 
-    public int getCountsElements() {
-        return getCountsElements(root);
+    public int getCount() {
+        return count;
     }
 
-    private int getCountsElements(BinarySearchTreeNode<T> node) {
-        if (node == null) {
-            return 0;
-        } else {
-            int count = 1;
-
-            count += getCountsElements(node.getLeft());
-            count += getCountsElements(node.getRight());
-
-            return count;
-        }
-    }
-
-    public void insertNode(T value) {
-        BinarySearchTreeNode<T> node = new BinarySearchTreeNode<>(value);
+    public void insertNode(T data) {
+        BinarySearchTreeNode<T> node = new BinarySearchTreeNode<>(data);
 
         if (root == null) {
             root = node;
-
             return;
         }
 
-        BinarySearchTreeNode<T> current = root;
-        BinarySearchTreeNode<T> parent;
+        BinarySearchTreeNode<T> currentNode = root;
+        BinarySearchTreeNode<T> parentNode = null;
 
-        while (true) {
-            parent = current;
+        while (currentNode != null) {
+            parentNode = currentNode;
 
-            if ((int) current.getData() > (int) value) {
-                current = current.getLeft();
-
-                if (current == null) {
-                    parent.setLeft(node);
-
-                    return;
-                }
+            if (node.getData().compareTo(currentNode.getData()) < 0) {
+                currentNode = currentNode.getLeft();
             } else {
-                current = current.getRight();
-
-                if (current == null) {
-                    parent.setRight(node);
-
-                    return;
-                }
+                currentNode = currentNode.getRight();
             }
         }
+
+        if (node.getData().compareTo(parentNode.getData()) < 0) {
+            parentNode.setLeft(node);
+        } else {
+            parentNode.setRight(node);
+        }
+
+        count++;
     }
 
-    public boolean findNode(T value) {
+    public boolean findNode(T data) {
         if (root == null) {
             return false;
         }
 
+        BinarySearchTreeNode<T> node = new BinarySearchTreeNode<>(data);
         BinarySearchTreeNode<T> currentNode = root;
 
         while (currentNode != null) {
-            if ((int) currentNode.getData() == (int) value) {
+            if (currentNode.getData() == data) {
                 return true;
-            } else if ((int) currentNode.getData() > (int) value) {
+            }
+
+            if (node.getData().compareTo(currentNode.getData()) < 0) {
                 currentNode = currentNode.getLeft();
             } else {
                 currentNode = currentNode.getRight();
@@ -95,105 +79,37 @@ public class BinarySearchTree<T> {
         return false;
     }
 
-    public boolean removeNode(int value) {
-        if (root == null) {
-            return false;
-        }
-
-        BinarySearchTreeNode<T> current = root;
-        BinarySearchTreeNode<T> parent = root;
-
-        boolean isLeft = false;
-
-        while ((int) current.getData() != value) {
-            parent = current;
-
-            if ((int) current.getData() > value) {
-                isLeft = true;
-                current = current.getLeft();
-            } else {
-                isLeft = false;
-                current = current.getRight();
-            }
-
-            if (current == null) {
-                return false;
-            }
-        }
-
-        if (current.getLeft() == null && current.getRight() == null) {
-            if (current == root) {
-                root = null;
-            } else if (isLeft) {
-                parent.setLeft(null);
-            } else {
-                parent.setRight(null);
-            }
-
-            return true;
-        }
-
-        if (current.getLeft() == null) {
-            if (current == root) {
-                root = current.getRight();
-            } else if (isLeft) {
-                parent.setLeft(current.getRight());
-            } else {
-                parent.setRight(current.getRight());
-            }
-
-            return true;
-        }
-
-        if (current.getRight() == null) {
-            if (current == root) {
-                root = current.getLeft();
-            } else if (isLeft) {
-                parent.setLeft(current.getLeft());
-            } else {
-                parent.setRight(current.getLeft());
-            }
-
-            return true;
-        }
-
-        if (current.getLeft() == null && current.getRight() == null) {
-            BinarySearchTreeNode<T> successor = getSuccessor(current);
-            successor.setLeft(current.getLeft());
-            successor.setRight(current.getRight());
-
-            if (current == root) {
-                root = successor;
-            } else if (isLeft) {
-                parent.setLeft(successor);
-            } else {
-                parent.setRight(successor);
-            }
-
-            return true;
-        }
-
-        return false;
-
+    public void removeNode(T data) {
+        root = removeNode(root, data);
     }
 
-    private BinarySearchTreeNode<T> getSuccessor(BinarySearchTreeNode<T> node) {
-        BinarySearchTreeNode<T> parent = null;
-        BinarySearchTreeNode<T> successor = null;
-        BinarySearchTreeNode<T> current = node.getRight();
-
-        while (current != null) {
-            parent = successor;
-            successor = current;
-            current = current.getLeft();
+    public BinarySearchTreeNode<T> removeNode(BinarySearchTreeNode<T> root, T data) {
+        if (root == null) {
+            return null;
+        } else if (data.compareTo(root.getData()) < 0) {
+            root.setLeft(removeNode(root.getLeft(), data));
+        } else if (data.compareTo(root.getData()) > 0) {
+            root.setRight(removeNode(root.getRight(), data));
+        } else {
+            if (root.getLeft() == null) {
+                return root.getRight();
+            } else if (root.getRight() == null) {
+                return root.getLeft();
+            } else {
+                root.setData(findMax(root.getLeft()));
+                root.setLeft(removeNode(root.getLeft(), root.getData()));
+            }
         }
 
-        if (successor != node.getRight()) {
-            parent.setLeft(successor.getRight());
-            successor.setRight(null);
+        return root;
+    }
+
+    private T findMax(BinarySearchTreeNode<T> root) {
+        while (root.getRight() != null) {
+            root = root.getRight();
         }
 
-        return successor;
+        return root.getData();
     }
 
     public void widthTraverse() {
@@ -205,6 +121,7 @@ public class BinarySearchTree<T> {
 
         while (!queue.isEmpty()) {
             BinarySearchTreeNode<T> node = queue.remove();
+
             if (node.getLeft() != null) {
                 queue.add(node.getLeft());
             }
@@ -215,12 +132,41 @@ public class BinarySearchTree<T> {
         }
     }
 
-    public void traversalWithRecursion(BinarySearchTreeNode<T> node) {
-        if (node == null) {
+    public void traversalWithRecursion(BinarySearchTreeNode<T> root) {
+        if (root == null) {
             return;
         }
 
-        traversalWithRecursion(node.getLeft());
-        traversalWithRecursion(node.getRight());
+        traversalWithRecursion(root.getLeft());
+        traversalWithRecursion(root.getRight());
+    }
+
+    public void traversalWithoutRecursion() {
+        BinarySearchTreeNode<T> node = root;
+        BinarySearchTreeNode<T> previous = null;
+        BinarySearchTreeNode<T> next;
+
+        while (node != null) {
+            if (previous == node.getData()) {
+                if (node.getLeft() != null) {
+                    next = node.getLeft();
+                } else if (node.getRight() != null) {
+                    next = node.getRight();
+                } else {
+                    next = new BinarySearchTreeNode<>(node.getData());
+                }
+            } else if (previous == node.getLeft()) {
+                if (node.getRight() != null) {
+                    next = node.getRight();
+                } else {
+                    next = new BinarySearchTreeNode<>(node.getData());
+                }
+            } else {
+                next = new BinarySearchTreeNode<>(node.getData());
+            }
+
+            previous = node;
+            node = next;
+        }
     }
 }

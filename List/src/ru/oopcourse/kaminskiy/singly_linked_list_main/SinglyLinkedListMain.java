@@ -33,6 +33,10 @@ public class SinglyLinkedListMain {
 
         System.out.println("getByIndex: " + list.getByIndex(0));
 
+        System.out.println("list: " + list);
+
+        System.out.println("setByIndex: " + list.setByIndex(2, 11));
+
         list.addLast(12);
 
         System.out.println("list: " + list);
