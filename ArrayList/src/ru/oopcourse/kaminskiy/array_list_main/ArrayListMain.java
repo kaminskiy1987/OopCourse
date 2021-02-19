@@ -50,7 +50,7 @@ public class ArrayListMain {
         System.out.println("addAll(collection) : " + arrayList1.addAll(arrayList4));
         System.out.println("arrayList1 : " + arrayList1);
 
-        System.out.println("addAll(index, collection) : " + arrayList2.addAll(1, arrayList3));
+        System.out.println("addAll(index, collection) : " + arrayList2.addAll(3, arrayList3));
         System.out.println("arrayList2 : " + arrayList2);
 
         System.out.println("removeAll : " + arrayList1.removeAll(arrayList4));

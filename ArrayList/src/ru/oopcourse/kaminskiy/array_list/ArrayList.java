@@ -25,7 +25,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        checkElementIndex(index);
+        checkRange(index);
 
         return items[index];
     }
@@ -33,7 +33,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T set(int index, T item) {
-        checkElementIndex(index);
+        checkRange(index);
 
         T oldItem = items[index];
         items[index] = item;
@@ -43,14 +43,10 @@ public class ArrayList<T> implements List<T> {
 
     public String toString() {
         if (size == 0) {
-            return ("{}");
+            return "{}";
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-
-        if (items == null) {
-            return stringBuilder.toString();
-        }
 
         stringBuilder.append("{");
 
@@ -63,13 +59,13 @@ public class ArrayList<T> implements List<T> {
         return stringBuilder.toString();
     }
 
-    private void checkPositionIndex(int index) {
+    private void checkRangeWhenAdding(int index) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " > " + size);
         }
     }
 
-    private void checkElementIndex(int index) {
+    private void checkRange(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " >= " + size);
         }
@@ -77,11 +73,9 @@ public class ArrayList<T> implements List<T> {
 
 
     public void ensureCapacity(int newCapacity) {
-        if (newCapacity >= items.length) {
+        if (newCapacity > items.length) {
             items = Arrays.copyOf(items, newCapacity);
         }
-
-        newCapacity = items.length;
     }
 
     public void trimToSize() {
@@ -125,7 +119,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public void add(int index, T item) {
-        checkPositionIndex(index);
+        checkRangeWhenAdding(index);
 
         modCount++;
 
@@ -148,7 +142,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T remove(int index) {
-        checkElementIndex(index);
+        checkRange(index);
 
         modCount++;
 
@@ -196,8 +190,8 @@ public class ArrayList<T> implements List<T> {
     }
 
     private class ArrayListIterator implements Iterator<T> {
-        int currentIndex = -1;
-        final int iteratorModCount = modCount;
+        private int currentIndex = -1;
+        private final int iteratorModCount = modCount;
 
         @Override
         public boolean hasNext() {
@@ -276,20 +270,20 @@ public class ArrayList<T> implements List<T> {
             return false;
         }
 
-        checkPositionIndex(index);
+        checkRangeWhenAdding(index);
 
         modCount++;
 
-        if (c.size() + size > items.length) {
-            ensureCapacity(size + c.size());
-        }
+        ensureCapacity(size + c.size());
 
         if (size > 0 && index != size) {
             System.arraycopy(items, index, items, index + c.size(), size - index);
         }
 
-        //noinspection SuspiciousSystemArraycopy
-        System.arraycopy(c.toArray(), 0, items, index, c.size());
+        for (T e : c) {
+            items[index] = e;
+            index++;
+        }
 
         size += c.size();
 
@@ -309,7 +303,7 @@ public class ArrayList<T> implements List<T> {
         boolean isRemoved = false;
 
         for (Object o : c) {
-            if (c.contains(o)) {
+            if (contains(o)) {
                 remove(o);
                 isRemoved = true;
             }
@@ -320,24 +314,20 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        if (c == null) {
-            throw new NullPointerException("The Collection is null");
-        }
-
         if (c.size() == 0) {
             return false;
         }
 
-        boolean isRetained = false;
+        boolean isRemoved = false;
 
         for (Object o : c) {
-            if (!c.contains(o)) {
+            if (!contains(o)) {
                 remove(o);
-                isRetained = true;
+                isRemoved = true;
             }
         }
 
-        return isRetained;
+        return isRemoved;
     }
 
     @Override
