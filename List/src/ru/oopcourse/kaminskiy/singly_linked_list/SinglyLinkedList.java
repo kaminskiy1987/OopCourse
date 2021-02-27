@@ -9,6 +9,8 @@ public class SinglyLinkedList<T> {
 
     public SinglyLinkedList(T data) {
         head = new ListItem<>(data);
+
+        count++;
     }
 
     public SinglyLinkedList() {
@@ -76,27 +78,28 @@ public class SinglyLinkedList<T> {
         return removedData;
     }
 
-    private void checkPositionIndex(int index) {
+    private void checkIndexForAdding(int index) {
         if (index < 0 || index > count) {
             throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " > " + count);
-
         }
     }
 
-    private void checkElementIndex(int index) {
+    private void checkIndex(int index) {
         if (index < 0 || index >= count) {
             throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " >= " + count);
         }
     }
 
     public boolean removeByData(T data) {
+        if (head == null) {
+            throw new NoSuchElementException("list empty");
+        }
+
         if (Objects.equals(head.getData(), data)) {
-            if (head.getNext() == null) {
                 removeFirst();
 
                 return true;
             }
-        }
 
         ListItem<T> nextItem = head.getNext();
         ListItem<T> currentItem = head;
@@ -119,7 +122,7 @@ public class SinglyLinkedList<T> {
 
 
     public T removeByIndex(int index) {
-        checkElementIndex(index);
+        checkIndex(index);
 
         if (index == 0) {
             return removeFirst();
@@ -143,7 +146,7 @@ public class SinglyLinkedList<T> {
     }
 
     public boolean addByIndex(int index, T data) {
-        checkPositionIndex(index);
+        checkIndexForAdding(index);
 
         if (index == 0) {
             addFirst(data);
@@ -167,19 +170,19 @@ public class SinglyLinkedList<T> {
     }
 
     public T getByIndex(int index) {
-        checkElementIndex(index);
+        checkIndex(index);
 
         return getListItem(index).getData();
     }
 
     public T setByIndex(int index, T data) {
-        checkElementIndex(index);
+        checkIndex(index);
 
         ListItem<T> currentItem = getListItem(index);
-        T insertedData = currentItem.getData();
+        T oldData = currentItem.getData();
         currentItem.setData(data);
 
-        return insertedData;
+        return oldData;
     }
 
     public void reverse() {
