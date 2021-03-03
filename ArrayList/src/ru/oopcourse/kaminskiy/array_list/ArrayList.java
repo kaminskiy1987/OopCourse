@@ -25,7 +25,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        checkRange(index);
+        checkIndex(index);
 
         return items[index];
     }
@@ -33,7 +33,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T set(int index, T item) {
-        checkRange(index);
+        checkIndex(index);
 
         T oldItem = items[index];
         items[index] = item;
@@ -59,13 +59,13 @@ public class ArrayList<T> implements List<T> {
         return stringBuilder.toString();
     }
 
-    private void checkRangeWhenAdding(int index) {
+    private void checkIndexForAdding(int index) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " > " + size);
         }
     }
 
-    private void checkRange(int index) {
+    private void checkIndex(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("index out of bounds: " + index + " < 0 or " + index + " >= " + size);
         }
@@ -119,7 +119,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public void add(int index, T item) {
-        checkRangeWhenAdding(index);
+        checkIndexForAdding(index);
 
         modCount++;
 
@@ -142,7 +142,7 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public T remove(int index) {
-        checkRange(index);
+        checkIndex(index);
 
         modCount++;
 
@@ -266,11 +266,11 @@ public class ArrayList<T> implements List<T> {
             throw new NullPointerException("The Collection is null");
         }
 
+        checkIndexForAdding(index);
+
         if (c.size() == 0) {
             return false;
         }
-
-        checkRangeWhenAdding(index);
 
         modCount++;
 
@@ -280,14 +280,17 @@ public class ArrayList<T> implements List<T> {
             System.arraycopy(items, index, items, index + c.size(), size - index);
         }
 
+        int i = index;
+
         for (T e : c) {
-            items[index] = e;
-            index++;
+            items[i] = e;
+
+            i++;
         }
 
         size += c.size();
 
-        return c.size() != 0;
+        return true;
     }
 
     @Override
@@ -300,16 +303,15 @@ public class ArrayList<T> implements List<T> {
             return false;
         }
 
-        boolean isRemoved = false;
+        int index = c.size();
 
         for (Object o : c) {
-            if (contains(o)) {
-                remove(o);
-                isRemoved = true;
-            }
+            remove(o);
+
+            index--;
         }
 
-        return isRemoved;
+        return true;
     }
 
     @Override
@@ -320,9 +322,10 @@ public class ArrayList<T> implements List<T> {
 
         boolean isRemoved = false;
 
-        for (Object o : c) {
-            if (!contains(o)) {
+        for (Object o : items) {
+            if (!c.contains(o)) {
                 remove(o);
+
                 isRemoved = true;
             }
         }
