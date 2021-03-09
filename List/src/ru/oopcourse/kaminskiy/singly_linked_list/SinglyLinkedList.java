@@ -92,14 +92,14 @@ public class SinglyLinkedList<T> {
 
     public boolean removeByData(T data) {
         if (head == null) {
-            throw new NoSuchElementException("list empty");
+            return false;
         }
 
         if (Objects.equals(head.getData(), data)) {
-                removeFirst();
+            removeFirst();
 
-                return true;
-            }
+            return true;
+        }
 
         ListItem<T> nextItem = head.getNext();
         ListItem<T> currentItem = head;
@@ -162,7 +162,6 @@ public class SinglyLinkedList<T> {
         count++;
 
         return true;
-
     }
 
     public void addLast(T data) {
@@ -204,13 +203,17 @@ public class SinglyLinkedList<T> {
             return new SinglyLinkedList<>();
         }
 
-        SinglyLinkedList<T> clonedList = new SinglyLinkedList<>(head.getData());
+        SinglyLinkedList<T> clonedList = new SinglyLinkedList<>();
+
+        clonedList.head = new ListItem<>(head.getData());
+        clonedList.count = count;
+
         ListItem<T> current = head;
         ListItem<T> clonedNode = clonedList.head;
 
         while (current.getNext() != null) {
             current = current.getNext();
-            clonedNode.setNext(new ListItem<>(current.getData()));
+            clonedNode.setNext(new ListItem<>(current.getData(), current.getNext()));
             clonedNode = clonedNode.getNext();
         }
 
