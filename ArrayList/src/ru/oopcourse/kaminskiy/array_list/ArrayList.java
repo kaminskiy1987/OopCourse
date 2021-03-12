@@ -276,7 +276,7 @@ public class ArrayList<T> implements List<T> {
 
         ensureCapacity(size + c.size());
 
-        if (size > 0 && index != size) {
+        if (index != size) {
             System.arraycopy(items, index, items, index + c.size(), size - index);
         }
 
@@ -295,44 +295,52 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        if (c == null) {
-            throw new NullPointerException("The Collection is null");
-        }
-
         if (c.size() == 0) {
             return false;
         }
 
-        int index = c.size();
+        int index = 0;
+        int i = 0;
 
-        for (Object o : c) {
-            remove(o);
+        for (; i < size; i++) {
+            if (!c.contains(items[i])) {
+                items[index] = items[i];
 
-            index--;
+                index++;
+            }
         }
 
-        return true;
+        if (index != i) {
+            size = index;
+
+            return true;
+        }
+
+        return false;
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        if (c.size() == 0) {
-            return false;
-        }
+        int index = 0;
+        int i = 0;
 
-        boolean isRemoved = false;
+        for (; i < size; i++) {
+            if (c.contains(items[i])) {
+                items[index] = items[i];
 
-        for (Object o : items) {
-            if (!c.contains(o)) {
-                remove(o);
-
-                isRemoved = true;
+                index++;
             }
         }
 
-        return isRemoved;
-    }
+        if (index != i) {
+            size = index;
 
+            return true;
+        }
+
+        return false;
+    }
+    
     @Override
     public ListIterator<T> listIterator() {
         return null;
