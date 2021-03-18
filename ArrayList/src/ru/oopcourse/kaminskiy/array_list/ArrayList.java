@@ -310,7 +310,12 @@ public class ArrayList<T> implements List<T> {
             }
         }
 
-        if (index != i) {
+        if (index != size) {
+            for (int j = index; j < size; j++) {
+                items[j] = null;
+            }
+
+            modCount += size - index;
             size = index;
 
             return true;
@@ -332,7 +337,12 @@ public class ArrayList<T> implements List<T> {
             }
         }
 
-        if (index != i) {
+        if (index != size) {
+            for (int j = index; j < size; j++) {
+                items[j] = null;
+            }
+
+            modCount += size - index;
             size = index;
 
             return true;
@@ -340,7 +350,7 @@ public class ArrayList<T> implements List<T> {
 
         return false;
     }
-    
+
     @Override
     public ListIterator<T> listIterator() {
         return null;

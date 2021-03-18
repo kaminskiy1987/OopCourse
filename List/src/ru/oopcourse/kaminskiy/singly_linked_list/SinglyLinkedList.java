@@ -213,7 +213,7 @@ public class SinglyLinkedList<T> {
 
         while (current.getNext() != null) {
             current = current.getNext();
-            clonedNode.setNext(new ListItem<>(current.getData(), current.getNext()));
+            clonedNode.setNext(new ListItem<>(current.getData()));
             clonedNode = clonedNode.getNext();
         }
 
