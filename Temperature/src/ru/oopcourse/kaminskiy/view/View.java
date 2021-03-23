@@ -3,15 +3,11 @@ package ru.oopcourse.kaminskiy.view;
 public interface View {
     void start();
 
-    void setKelvinCelsiusTemperature(double kelvinTemperature);
+    double getValue();
 
-    void setCelsiusKelvinTemperature(double celsiusTemperature);
+    void setFahrenheit(double value);
 
-    void setFahrenheitCelsiusTemperature(double fahrenheitTemperature);
+    void setCelsius(double value);
 
-    void setCelsiusFahrenheitTemperature(double celsiusTemperature);
-
-    void setKelvinFahrenheitTemperature(double kelvinTemperature);
-
-    void setFahrenheitKelvinTemperature(double fahrenheitTemperature);
+    void setKelvin(double value);
 }
