@@ -1,7 +1,7 @@
 package ru.oopcourse.kaminskiy.binary_search_tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BinarySearchTree<T extends Comparable<T>> {
     public BinarySearchTreeNode<T> root;
@@ -12,14 +12,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     public BinarySearchTree(T data) {
         root = new BinarySearchTreeNode<>(data);
-    }
 
-    public void toString(BinarySearchTreeNode<T> root) {
-        if (root != null) {
-            toString(root.getLeft());
-            System.out.print(root.getData() + " ");
-            toString(root.getRight());
-        }
+        count++;
     }
 
     public int getCount() {
@@ -31,6 +25,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         if (root == null) {
             root = node;
+
+            count++;
+
             return;
         }
 
@@ -79,94 +76,163 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return false;
     }
 
-    public void removeNode(T data) {
-        root = removeNode(root, data);
-    }
-
-    public BinarySearchTreeNode<T> removeNode(BinarySearchTreeNode<T> root, T data) {
+    public boolean removeNode(T data) {
         if (root == null) {
-            return null;
-        } else if (data.compareTo(root.getData()) < 0) {
-            root.setLeft(removeNode(root.getLeft(), data));
-        } else if (data.compareTo(root.getData()) > 0) {
-            root.setRight(removeNode(root.getRight(), data));
-        } else {
-            if (root.getLeft() == null) {
-                return root.getRight();
-            } else if (root.getRight() == null) {
-                return root.getLeft();
+            return false;
+        }
+
+        BinarySearchTreeNode<T> parentNode = null;
+        BinarySearchTreeNode<T> currentNode = root;
+
+        while (currentNode != null) {
+            if (data.compareTo(currentNode.getData()) < 0) {
+                parentNode = currentNode;
+                currentNode = currentNode.getLeft();
+            } else if (data.compareTo(currentNode.getData()) > 0) {
+                parentNode = currentNode;
+                currentNode = currentNode.getRight();
             } else {
-                root.setData(findMax(root.getLeft()));
-                root.setLeft(removeNode(root.getLeft(), root.getData()));
+                break;
             }
         }
 
-        return root;
-    }
-
-    private T findMax(BinarySearchTreeNode<T> root) {
-        while (root.getRight() != null) {
-            root = root.getRight();
+        if (currentNode == null) {
+            return false;
         }
 
-        return root.getData();
-    }
-
-    public void widthTraverse() {
-        Queue<BinarySearchTreeNode<T>> queue = new LinkedList<>();
-
-        if (root != null) {
-            queue.add(root);
-        }
-
-        while (!queue.isEmpty()) {
-            BinarySearchTreeNode<T> node = queue.remove();
-
-            if (node.getLeft() != null) {
-                queue.add(node.getLeft());
+        if (currentNode.getLeft() == null) {
+            if (parentNode == null) {
+                root = currentNode.getRight();
+            } else {
+                if (data.compareTo(parentNode.getData()) < 0) {
+                    parentNode.setLeft(currentNode.getRight());
+                } else {
+                    parentNode.setRight(currentNode.getRight());
+                }
+            }
+        } else {
+            while (currentNode.getLeft().getRight() != null) {
+                currentNode = currentNode.getLeft();
+                currentNode.setLeft(currentNode.getLeft().getRight());
             }
 
-            if (node.getRight() != null) {
-                queue.add(node.getRight());
+            currentNode.setData(currentNode.getLeft().getData());
+
+            if (currentNode.getRight().equals(currentNode.getLeft())) {
+                currentNode.setRight(currentNode.getLeft().getLeft());
+            } else {
+                currentNode.setLeft(currentNode.getLeft().getLeft());
             }
         }
+
+        --count;
+
+        return true;
     }
 
-    public void traversalWithRecursion(BinarySearchTreeNode<T> root) {
-        if (root == null) {
+    public String toStringInorder() {
+        StringBuilder stringBuilder = new StringBuilder("[");
+        toStringInorder(stringBuilder, root);
+
+        return stringBuilder.append("]").toString();
+    }
+
+    private void toStringInorder(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
+        if (currentNode == null) {
             return;
         }
 
-        traversalWithRecursion(root.getLeft());
-        traversalWithRecursion(root.getRight());
+        toStringInorder(stringBuilder, currentNode.getLeft());
+
+        if (stringBuilder.length() > 1) {
+            stringBuilder.append(", ");
+        }
+
+        stringBuilder.append(currentNode.getData());
+        toStringInorder(stringBuilder, currentNode.getRight());
     }
 
-    public void traversalWithoutRecursion() {
-        BinarySearchTreeNode<T> node = root;
-        BinarySearchTreeNode<T> previous = null;
-        BinarySearchTreeNode<T> next;
+    public String toStringPreorder() {
+        StringBuilder stringBuilder = new StringBuilder("[");
+        toStringPreorder(stringBuilder, root);
 
-        while (node != null) {
-            if (previous == node.getData()) {
-                if (node.getLeft() != null) {
-                    next = node.getLeft();
-                } else if (node.getRight() != null) {
-                    next = node.getRight();
-                } else {
-                    next = new BinarySearchTreeNode<>(node.getData());
-                }
-            } else if (previous == node.getLeft()) {
-                if (node.getRight() != null) {
-                    next = node.getRight();
-                } else {
-                    next = new BinarySearchTreeNode<>(node.getData());
-                }
-            } else {
-                next = new BinarySearchTreeNode<>(node.getData());
+        return stringBuilder.append("]").toString();
+    }
+
+    private void toStringPreorder(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
+        if (currentNode == null) {
+            return;
+        }
+
+        if (stringBuilder.length() > 1) {
+            stringBuilder.append(", ");
+        }
+
+        stringBuilder.append(currentNode.getData());
+        toStringPreorder(stringBuilder, currentNode.getLeft());
+        toStringPreorder(stringBuilder, currentNode.getRight());
+    }
+
+    public String toStringPostOrder() {
+        StringBuilder stringBuilder = new StringBuilder("[");
+        toStringPostOrder(stringBuilder, root);
+
+        return stringBuilder.append("]").toString();
+    }
+
+    private void toStringPostOrder(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
+        if (currentNode == null) {
+            return;
+        }
+
+        toStringPostOrder(stringBuilder, currentNode.getLeft());
+        toStringPostOrder(stringBuilder, currentNode.getRight());
+
+        if (stringBuilder.length() > 1) {
+            stringBuilder.append(", ");
+        }
+
+        stringBuilder.append(currentNode.getData());
+    }
+
+    public String toStringBreadthFirst() {
+        StringBuilder stringBuilder = new StringBuilder("[");
+
+        if (root != null) {
+            List<BinarySearchTreeNode<T>> current = new ArrayList<>(1);
+            current.add(root);
+            toStringBreadthFirst(stringBuilder, current);
+        }
+
+        return stringBuilder.append("]").toString();
+    }
+
+    private void toStringBreadthFirst(StringBuilder stringBuilder, List<BinarySearchTreeNode<T>> current) {
+        List<BinarySearchTreeNode<T>> next = new ArrayList<>();
+
+        for (BinarySearchTreeNode<T> currentNode : current) {
+            if (stringBuilder.length() > 1) {
+                stringBuilder.append(", ");
             }
 
-            previous = node;
-            node = next;
+            stringBuilder.append(currentNode.getData());
+
+            if (currentNode.getLeft() != null) {
+                next.add(currentNode.getLeft());
+            }
+
+            if (currentNode.getRight() != null) {
+                next.add(currentNode.getRight());
+            }
         }
+
+        if (!next.isEmpty()) {
+            toStringBreadthFirst(stringBuilder, next);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return toStringInorder();
     }
 }

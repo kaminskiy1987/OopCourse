@@ -15,27 +15,21 @@ public class BinarySearchTreeMain {
         binarySearchTree.insertNode(21);
         binarySearchTree.insertNode(1);
 
-        binarySearchTree.toString(binarySearchTree.root);
-        System.out.println();
+        System.out.println("binarySearchTree: " + binarySearchTree);
 
         System.out.println("search: " + binarySearchTree.findNode(66));
 
         System.out.println("count: " + binarySearchTree.getCount());
 
-        binarySearchTree.removeNode(22);
-        binarySearchTree.toString(binarySearchTree.root);
-        System.out.println();
+        System.out.println("removeNode: " + binarySearchTree.removeNode(21));
+        System.out.println("binarySearchTree: " + binarySearchTree);
 
-        binarySearchTree.widthTraverse();
-        binarySearchTree.toString(binarySearchTree.root);
-        System.out.println();
+        System.out.println("toStringInorder: " + binarySearchTree.toStringInorder());
 
-        binarySearchTree.traversalWithoutRecursion();
-        binarySearchTree.toString(binarySearchTree.root);
-        System.out.println();
+        System.out.println("toStringPostOrder: " + binarySearchTree.toStringPostOrder());
 
-        binarySearchTree.traversalWithRecursion(binarySearchTree.root);
-        binarySearchTree.toString(binarySearchTree.root);
-        System.out.println();
+        System.out.println("toStringPreorder: " + binarySearchTree.toStringPreorder());
+
+        System.out.println("toStringBreadthFirst: " + binarySearchTree.toStringBreadthFirst());
     }
 }
