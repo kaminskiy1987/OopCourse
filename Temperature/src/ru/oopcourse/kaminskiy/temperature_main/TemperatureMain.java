@@ -1,19 +1,18 @@
 package ru.oopcourse.kaminskiy.temperature_main;
 
-import ru.oopcourse.kaminskiy.controller.Controller;
-import ru.oopcourse.kaminskiy.model.Converter;
-import ru.oopcourse.kaminskiy.view.DesktopView;
-import ru.oopcourse.kaminskiy.view.View;
+import ru.oopcourse.kaminskiy.temperature_view.TemperatureDesktopView;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class TemperatureMain {
     public static void main(String[] args) {
-        Converter temperatureConverter = new Converter();
-
-        Controller controller = new Controller(temperatureConverter);
-        View view = new DesktopView(controller);
-
-        controller.setView(view);
-
-        view.start();
+        JFrame frame = new JFrame();
+        frame.setSize(500, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Temperature Converter");
+        frame.setContentPane(new TemperatureDesktopView());
+        frame.setVisible(true);
+        frame.getContentPane().setBackground(Color.white);
     }
 }
