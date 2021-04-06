@@ -9,9 +9,6 @@ public class BinarySearchTreeNode<T> {
         this.data = data;
     }
 
-    public BinarySearchTreeNode() {
-    }
-
     public BinarySearchTreeNode<T> getLeft() {
         return left;
     }
