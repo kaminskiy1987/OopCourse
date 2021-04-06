@@ -1,10 +1,11 @@
 package ru.oopcourse.kaminskiy.binary_search_tree_main;
 
 import ru.oopcourse.kaminskiy.binary_search_tree.BinarySearchTree;
+import ru.oopcourse.kaminskiy.binary_search_tree.BinarySearchTreeComparator;
 
 public class BinarySearchTreeMain {
     public static void main(String[] args) {
-        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>(new BinarySearchTreeComparator());
 
         binarySearchTree.insertNode(5);
         binarySearchTree.insertNode(4);
@@ -24,12 +25,14 @@ public class BinarySearchTreeMain {
         System.out.println("removeNode: " + binarySearchTree.removeNode(21));
         System.out.println("binarySearchTree: " + binarySearchTree);
 
-        System.out.println("toStringInorder: " + binarySearchTree.toStringInorder());
+        binarySearchTree.breadTraversal(System.out::println);
+        System.out.println("breadTraversal: " + binarySearchTree);
 
-        System.out.println("toStringPostOrder: " + binarySearchTree.toStringPostOrder());
+        binarySearchTree.traversalWithRecursion(System.out::println);
+        System.out.println("traversalWithRecursion: " + binarySearchTree);
 
-        System.out.println("toStringPreorder: " + binarySearchTree.toStringPreorder());
+        binarySearchTree.traversalWithoutRecursion(System.out::println);
+        System.out.println("traversalWithoutRecursion: " + binarySearchTree);
 
-        System.out.println("toStringBreadthFirst: " + binarySearchTree.toStringBreadthFirst());
     }
 }

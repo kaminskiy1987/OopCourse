@@ -1,19 +1,21 @@
 package ru.oopcourse.kaminskiy.binary_search_tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
 
-public class BinarySearchTree<T extends Comparable<T>> {
+public class BinarySearchTree<T> {
     public BinarySearchTreeNode<T> root;
+    private Comparator<T> comparator;
     public int count;
-
-    public BinarySearchTree() {
-    }
 
     public BinarySearchTree(T data) {
         root = new BinarySearchTreeNode<>(data);
 
         count++;
+    }
+
+    public BinarySearchTree(Comparator<T> comparator) {
+        this.comparator = comparator;
     }
 
     public int getCount() {
@@ -37,14 +39,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
         while (currentNode != null) {
             parentNode = currentNode;
 
-            if (node.getData().compareTo(currentNode.getData()) < 0) {
+            if (comparator.compare(data, currentNode.getData()) < 0) {
                 currentNode = currentNode.getLeft();
             } else {
                 currentNode = currentNode.getRight();
             }
         }
 
-        if (node.getData().compareTo(parentNode.getData()) < 0) {
+        if (comparator.compare(data, parentNode.getData()) < 0) {
             parentNode.setLeft(node);
         } else {
             parentNode.setRight(node);
@@ -58,15 +60,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return false;
         }
 
-        BinarySearchTreeNode<T> node = new BinarySearchTreeNode<>(data);
         BinarySearchTreeNode<T> currentNode = root;
 
         while (currentNode != null) {
-            if (currentNode.getData() == data) {
+            if (Objects.equals(data, currentNode.getData())) {
                 return true;
             }
 
-            if (node.getData().compareTo(currentNode.getData()) < 0) {
+            if (comparator.compare(data, currentNode.getData()) < 0) {
                 currentNode = currentNode.getLeft();
             } else {
                 currentNode = currentNode.getRight();
@@ -85,10 +86,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         BinarySearchTreeNode<T> currentNode = root;
 
         while (currentNode != null) {
-            if (data.compareTo(currentNode.getData()) < 0) {
+            if (comparator.compare(data, currentNode.getData()) < 0) {
                 parentNode = currentNode;
                 currentNode = currentNode.getLeft();
-            } else if (data.compareTo(currentNode.getData()) > 0) {
+            } else if (comparator.compare(data, currentNode.getData()) > 0) {
                 parentNode = currentNode;
                 currentNode = currentNode.getRight();
             } else {
@@ -104,7 +105,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             if (parentNode == null) {
                 root = currentNode.getRight();
             } else {
-                if (data.compareTo(parentNode.getData()) < 0) {
+                if (comparator.compare(data, parentNode.getData()) < 0) {
                     parentNode.setLeft(currentNode.getRight());
                 } else {
                     parentNode.setRight(currentNode.getRight());
@@ -118,7 +119,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
             currentNode.setData(currentNode.getLeft().getData());
 
-            if (currentNode.getRight().equals(currentNode.getLeft())) {
+            if (Objects.equals(currentNode.getRight(), currentNode.getLeft())) {
                 currentNode.setRight(currentNode.getLeft().getLeft());
             } else {
                 currentNode.setLeft(currentNode.getLeft().getLeft());
@@ -130,109 +131,94 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return true;
     }
 
-    public String toStringInorder() {
-        StringBuilder stringBuilder = new StringBuilder("[");
-        toStringInorder(stringBuilder, root);
-
-        return stringBuilder.append("]").toString();
-    }
-
-    private void toStringInorder(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
-        if (currentNode == null) {
+    public void breadTraversal(Consumer<T> consumer) {
+        Queue<BinarySearchTreeNode<T>> queue = new LinkedList<>();
+        if (root == null) {
             return;
         }
 
-        toStringInorder(stringBuilder, currentNode.getLeft());
+        queue.add(root);
 
-        if (stringBuilder.length() > 1) {
-            stringBuilder.append(", ");
+        while (!queue.isEmpty()) {
+            int level = queue.size();
+
+            if (count < level) {
+                count = level;
+            }
+
+            BinarySearchTreeNode<T> node = queue.remove();
+            consumer.accept(node.getData());
+
+            if (node.getLeft() != null) {
+                queue.add(node.getLeft());
+            }
+
+            if (node.getRight() != null) {
+                queue.add(node.getRight());
+            }
+
+            count--;
         }
-
-        stringBuilder.append(currentNode.getData());
-        toStringInorder(stringBuilder, currentNode.getRight());
     }
 
-    public String toStringPreorder() {
-        StringBuilder stringBuilder = new StringBuilder("[");
-        toStringPreorder(stringBuilder, root);
-
-        return stringBuilder.append("]").toString();
+    public void traversalWithRecursion(Consumer<T> consumer) {
+        traversalWithRecursion(root, consumer);
     }
 
-    private void toStringPreorder(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
-        if (currentNode == null) {
+    private void traversalWithRecursion(BinarySearchTreeNode<T> node, Consumer<T> consumer) {
+        if (node == null) {
             return;
         }
 
-        if (stringBuilder.length() > 1) {
-            stringBuilder.append(", ");
-        }
-
-        stringBuilder.append(currentNode.getData());
-        toStringPreorder(stringBuilder, currentNode.getLeft());
-        toStringPreorder(stringBuilder, currentNode.getRight());
+        traversalWithRecursion(node.getLeft(), consumer);
+        traversalWithRecursion(node.getRight(), consumer);
     }
 
-    public String toStringPostOrder() {
-        StringBuilder stringBuilder = new StringBuilder("[");
-        toStringPostOrder(stringBuilder, root);
-
-        return stringBuilder.append("]").toString();
-    }
-
-    private void toStringPostOrder(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
-        if (currentNode == null) {
-            return;
-        }
-
-        toStringPostOrder(stringBuilder, currentNode.getLeft());
-        toStringPostOrder(stringBuilder, currentNode.getRight());
-
-        if (stringBuilder.length() > 1) {
-            stringBuilder.append(", ");
-        }
-
-        stringBuilder.append(currentNode.getData());
-    }
-
-    public String toStringBreadthFirst() {
-        StringBuilder stringBuilder = new StringBuilder("[");
-
+    public void traversalWithoutRecursion(Consumer<T> consumer) {
+        Stack<BinarySearchTreeNode<T>> stack = new Stack<>();
         if (root != null) {
-            List<BinarySearchTreeNode<T>> current = new ArrayList<>(1);
-            current.add(root);
-            toStringBreadthFirst(stringBuilder, current);
+            stack.push(root);
         }
+
+        while (!stack.isEmpty()) {
+            BinarySearchTreeNode<T> node = stack.pop();
+            consumer.accept(node.getData());
+
+            if (node.getRight() != null) {
+                stack.push(node.getRight());
+            }
+
+            if (node.getLeft() != null) {
+                stack.push(node.getLeft());
+            }
+
+        }
+    }
+
+    public String traversal() {
+        StringBuilder stringBuilder = new StringBuilder("[");
+        traversal(stringBuilder, root);
 
         return stringBuilder.append("]").toString();
     }
 
-    private void toStringBreadthFirst(StringBuilder stringBuilder, List<BinarySearchTreeNode<T>> current) {
-        List<BinarySearchTreeNode<T>> next = new ArrayList<>();
-
-        for (BinarySearchTreeNode<T> currentNode : current) {
-            if (stringBuilder.length() > 1) {
-                stringBuilder.append(", ");
-            }
-
-            stringBuilder.append(currentNode.getData());
-
-            if (currentNode.getLeft() != null) {
-                next.add(currentNode.getLeft());
-            }
-
-            if (currentNode.getRight() != null) {
-                next.add(currentNode.getRight());
-            }
+    private void traversal(StringBuilder stringBuilder, BinarySearchTreeNode<T> currentNode) {
+        if (currentNode == null) {
+            return;
         }
 
-        if (!next.isEmpty()) {
-            toStringBreadthFirst(stringBuilder, next);
+        traversal(stringBuilder, currentNode.getLeft());
+
+        if (stringBuilder.length() > 1) {
+            stringBuilder.append(", ");
         }
+
+        stringBuilder.append(currentNode.getData());
+        traversal(stringBuilder, currentNode.getRight());
     }
 
     @Override
     public String toString() {
-        return toStringInorder();
+        return traversal();
     }
 }
