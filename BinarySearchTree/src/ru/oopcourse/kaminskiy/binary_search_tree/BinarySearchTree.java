@@ -24,10 +24,10 @@ public class BinarySearchTree<T> {
     private int compare(T data1, T data2) {
         if (comparator == null) {
             //noinspection unchecked
-            return ((Comparable<T>)data1).compareTo(data2);
+            return ((Comparable<T>) data1).compareTo(data2);
         }
 
-            return comparator.compare(data1, data2);
+        return comparator.compare(data1, data2);
     }
 
     public int getCount() {
@@ -152,8 +152,8 @@ public class BinarySearchTree<T> {
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            if (count <  queue.size()) {
-                count =  queue.size();
+            if (count < queue.size()) {
+                count = queue.size();
             }
 
             BinarySearchTreeNode<T> node = queue.remove();
@@ -203,7 +203,7 @@ public class BinarySearchTree<T> {
         }
     }
 
-    public String preOrderTraversal() {
+    private String preOrderTraversal() {
         StringBuilder stringBuilder = new StringBuilder("[");
         preOrderTraversal(stringBuilder, root);
 
