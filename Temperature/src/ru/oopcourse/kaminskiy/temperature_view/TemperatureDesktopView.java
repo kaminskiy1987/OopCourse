@@ -11,7 +11,7 @@ public class TemperatureDesktopView extends JFrame {
 
     public TemperatureDesktopView(TemperatureScale[] temperatureScales) {
         this.temperatureScales = temperatureScales;
-
+        
         Container pane = getContentPane();
         pane.setLayout(new GridLayout(5, 5));
 

@@ -17,3 +17,4 @@ public class TemperatureMain {
         new TemperatureDesktopView(temperatureScales);
     }
 }
+

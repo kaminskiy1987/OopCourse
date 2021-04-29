@@ -12,3 +12,4 @@ public class TemperatureCalculator {
         return temperatureScale2.fromCelsius(in);
     }
 }
+
