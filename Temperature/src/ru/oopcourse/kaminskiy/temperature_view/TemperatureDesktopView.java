@@ -7,79 +7,82 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TemperatureDesktopView extends JFrame {
-    private TemperatureScale[] temperatureScales;
+    TemperatureScale[] temperatureScales;
+    TemperatureCalculator temperatureCalculator;
 
-    public TemperatureDesktopView(TemperatureScale[] temperatureScales) {
+    public TemperatureDesktopView(TemperatureScale[] temperatureScales, TemperatureCalculator temperatureCalculator) {
         this.temperatureScales = temperatureScales;
-        
-        Container pane = getContentPane();
-        pane.setLayout(new GridLayout(5, 5));
+        this.temperatureCalculator = temperatureCalculator;
 
-        JButton convertButton = new JButton("Temperature Converter");
+        SwingUtilities.invokeLater(() -> {
+            setTitle("Temperature Converter");
+            Container pane = getContentPane();
+            pane.setLayout(new GridLayout(5, 5));
 
-        JLabel l1 = new JLabel("From", JLabel.CENTER);
+            JButton convertButton = new JButton("Temperature Converter");
 
-        JLabel l2 = new JLabel("To", JLabel.CENTER);
+            JLabel l1 = new JLabel("From", JLabel.CENTER);
 
-        JLabel data = new JLabel("Data: ", JLabel.CENTER);
+            JLabel l2 = new JLabel("To", JLabel.CENTER);
 
-        JLabel result = new JLabel("Result is: ", JLabel.CENTER);
+            JLabel data = new JLabel("Data: ", JLabel.CENTER);
 
-        JTextField textInput = new JTextField(20);
+            JLabel result = new JLabel("Result is: ", JLabel.CENTER);
 
-        JTextField textOutput = new JTextField(20);
+            JTextField textInput = new JTextField(20);
 
-        @SuppressWarnings("unchecked")
-        JComboBox fromCombo = new JComboBox(temperatureScales);
-        fromCombo.setVisible(true);
+            JTextField textOutput = new JTextField(20);
 
-        @SuppressWarnings("unchecked")
-        JComboBox toCombo = new JComboBox(temperatureScales);
-        toCombo.setVisible(true);
+            JComboBox<TemperatureScale> fromCombo = new JComboBox<>(temperatureScales);
+            fromCombo.setVisible(true);
 
-        convertButton.addActionListener(e -> {
-            try {
-                TemperatureScale from = ((TemperatureScale) fromCombo.getSelectedItem());
-                TemperatureScale to = ((TemperatureScale) toCombo.getSelectedItem());
+            JComboBox<TemperatureScale> toCombo = new JComboBox<>(temperatureScales);
+            toCombo.setVisible(true);
 
-                double temperature = Double.parseDouble(textInput.getText());
-                textInput.setText(Double.toString(temperature));
+            convertButton.addActionListener(e -> {
+                try {
+                    TemperatureScale from = ((TemperatureScale) fromCombo.getSelectedItem());
+                    TemperatureScale to = ((TemperatureScale) toCombo.getSelectedItem());
 
-                double converted = TemperatureCalculator.convert(temperature, from, to);
-                textOutput.setText(Double.toString(converted));
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(textInput, "Температура должна быть числом");
-            }
+                    double temperature = Double.parseDouble(textInput.getText());
+                    textInput.setText(Double.toString(temperature));
+
+                    double converted = temperatureCalculator.convert(temperature, from, to);
+                    textOutput.setText(Double.toString(converted));
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(textInput, "Temperature must be a number");
+                }
+            });
+
+            pane.add(l1);
+
+            pane.add(fromCombo);
+
+            pane.add(l2);
+
+            pane.add(toCombo);
+
+            pane.add(data);
+
+            pane.add(textInput);
+
+            pane.add(result);
+
+            pane.add(textOutput);
+
+            pane.add(convertButton);
+            convertButton.setBackground(Color.green);
+            setVisible(true);
+
+            textOutput.setBackground(Color.cyan);
+            textOutput.setEditable(false);
+            textInput.setForeground(Color.blue);
+
+            setSize(400, 200);
+            setVisible(true);
+            setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            setResizable(false);
+            setLocationRelativeTo(null);
         });
-
-        pane.add(l1);
-
-        pane.add(fromCombo);
-
-        pane.add(l2);
-
-        pane.add(toCombo);
-
-        pane.add(data);
-
-        pane.add(textInput);
-
-        pane.add(result);
-
-        pane.add(textOutput);
-
-        pane.add(convertButton);
-        convertButton.setBackground(Color.green);
-        setVisible(true);
-
-        textOutput.setBackground(Color.cyan);
-        textOutput.setEditable(false);
-        textInput.setForeground(Color.blue);
-
-        setSize(400, 200);
-        setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
-        setLocationRelativeTo(null);
     }
 }

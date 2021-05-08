@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="Add files Person, PersonMain">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/oopcourse/kaminskiy/arraylisthome_main/ArrayListHomeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person_main/PersonMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/oopcourse/kaminskiy/person_main/PersonMain.java" afterDir="false" />
+    <list default="true" id="86411129-2693-49d6-8361-8b52073004c4" name="Default Changelist" comment="Add files BinarySearchTree">
+      <change beforePath="$PROJECT_DIR$/OopCourse/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/ArrayList/src/ru/oopcourse/kaminskiy/array_list_main/ArrayListMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/BinarySearchTree/src/ru/oopcourse/kaminskiy/binary_search_tree_main/BinarySearchTreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/BinarySearchTree/src/ru/oopcourse/kaminskiy/binary_search_tree_main/BinarySearchTreeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Matrix/src/ru/oopcourse/kaminskiy/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Matrix/src/ru/oopcourse/kaminskiy/matrix/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Matrix/src/ru/oopcourse/kaminskiy/matrix_main/MatrixMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Matrix/src/ru/oopcourse/kaminskiy/matrix_main/MatrixMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_calculator/TemperatureCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_calculator/TemperatureCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_main/TemperatureMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_main/TemperatureMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/CelsiusScale.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/CelsiusScale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/FahrenheitScale.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/FahrenheitScale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/KelvinScale.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/KelvinScale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/TemperatureScale.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_scale/TemperatureScale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_view/TemperatureDesktopView.java" beforeDir="false" afterPath="$PROJECT_DIR$/OopCourse/Temperature/src/ru/oopcourse/kaminskiy/temperature_view/TemperatureDesktopView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +28,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/OopCourse" />
   </component>
-  <component name="ProjectId" id="1iEoIdNcXLZ4NCMsZhRzrzLAYIT" />
+  <component name="ProjectId" id="1oHrlvttx5lg4h7EDOdCBlMjQv7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,19 +39,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.PersonMain">
-    <configuration name="ArrayListHomeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.arraylisthome_main.ArrayListHomeMain" />
-      <module name="ArrayListHome" />
+  <component name="RunManager" selected="Application.TemperatureMain">
+    <configuration name="BinarySearchTreeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.binary_search_tree_main.BinarySearchTreeMain" />
+      <module name="BinarySearchTree" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.oopcourse.kaminskiy.arraylisthome_main.*" />
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.binary_search_tree_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,12 +55,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.array_list_main.ArrayListMain" />
-      <module name="ArrayList" />
+    <configuration name="HashTableMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.hash_table_main.HashTableMain" />
+      <module name="HashTable" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.oopcourse.kaminskiy.array_list_main.*" />
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.hash_table_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,12 +68,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.person_main.PersonMain" />
-      <module name="Lambda" />
+    <configuration name="MatrixMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.matrix_main.MatrixMain" />
+      <module name="Matrix" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.oopcourse.kaminskiy.person_main.*" />
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.matrix_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VectorMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.vector_main.VectorMain" />
-      <module name="Vector" />
+    <configuration name="TemperatureMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.oopcourse.kaminskiy.temperature_main.TemperatureMain" />
+      <module name="Temperature" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.oopcourse.kaminskiy.vector_main.*" />
+          <option name="PATTERN" value="ru.oopcourse.kaminskiy.temperature_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,293 +109,187 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PersonMain" />
+        <item itemvalue="Application.TemperatureMain" />
+        <item itemvalue="Application.HashTableMain" />
+        <item itemvalue="Application.BinarySearchTreeMain" />
+        <item itemvalue="Application.MatrixMain" />
         <item itemvalue="Application.SinglyLinkedListMain" />
-        <item itemvalue="Application.VectorMain (1)" />
-        <item itemvalue="Application.ArrayListMain" />
-        <item itemvalue="Application.ArrayListHomeMain" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df0e7983-72b6-4011-b720-791ca105ea65" name="Default Changelist" comment="" />
-      <created>1601482034045</created>
+      <changelist id="86411129-2693-49d6-8361-8b52073004c4" name="Default Changelist" comment="" />
+      <created>1612954511770</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1601482034045</updated>
+      <updated>1612954511770</updated>
     </task>
-    <task id="LOCAL-00001">
-      <created>1601482902623</created>
+    <task id="LOCAL-00001" summary="Add files ArrayList, ArrayListMain">
+      <created>1612955166068</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1601482902623</updated>
+      <updated>1612955166068</updated>
     </task>
-    <task id="LOCAL-00002">
-      <created>1601482961184</created>
+    <task id="LOCAL-00002" summary="Add files PersonMain">
+      <created>1613056884916</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1601482961184</updated>
+      <updated>1613056884916</updated>
     </task>
-    <task id="LOCAL-00003" summary="Add project Range">
-      <created>1601557064220</created>
+    <task id="LOCAL-00003" summary="Add files BinarySearchTree, BinarySearchTreeNode, BinarySearchTreeMain, SinglyLinkedList, SinglyLinkedListMain">
+      <created>1613192798460</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1601557064220</updated>
+      <updated>1613192798460</updated>
     </task>
-    <task id="LOCAL-00004" summary="Add project Range">
-      <created>1601557495289</created>
+    <task id="LOCAL-00004" summary="Add files PersonMain">
+      <created>1613559134683</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1601557495289</updated>
+      <updated>1613559134683</updated>
     </task>
-    <task id="LOCAL-00005" summary="Add project Range">
-      <created>1602304369229</created>
+    <task id="LOCAL-00005" summary="Add files ArrayList, ArrayListMain">
+      <created>1613747840619</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1602304369229</updated>
+      <updated>1613747840619</updated>
     </task>
-    <task id="LOCAL-00006" summary="Add project Shapes">
-      <created>1602305886079</created>
+    <task id="LOCAL-00006" summary="Add files SinglyLinkedList">
+      <created>1614398643458</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1602305886079</updated>
+      <updated>1614398643458</updated>
     </task>
-    <task id="LOCAL-00007" summary="Add project Range*">
-      <created>1602306277966</created>
+    <task id="LOCAL-00007" summary="Add files ArrayList">
+      <created>1614773353501</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1602306277966</updated>
+      <updated>1614773353501</updated>
     </task>
-    <task id="LOCAL-00008" summary="Add project Range*">
-      <created>1602306873170</created>
+    <task id="LOCAL-00008" summary="Add files SinglyLinkedList, Controller, Converter, TemperatureMain, DesktopView, View">
+      <created>1615304638081</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1602306873170</updated>
+      <updated>1615304638081</updated>
     </task>
-    <task id="LOCAL-00009" summary="Add project Range*">
-      <created>1602307150545</created>
+    <task id="LOCAL-00009" summary="Add files ArrayList">
+      <created>1615549321781</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1602307150545</updated>
+      <updated>1615549321781</updated>
     </task>
-    <task id="LOCAL-00010" summary="Add project Vector">
-      <created>1602906760224</created>
+    <task id="LOCAL-00010" summary="Add files ArrayList, SinglyLinkedList, Temperature.iml">
+      <created>1616068909882</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1602906760224</updated>
+      <updated>1616068909882</updated>
     </task>
-    <task id="LOCAL-00011" summary="Add files Shapes, Circle, Rectangle, Square, Triangle">
-      <created>1603282715387</created>
+    <task id="LOCAL-00011" summary="Add files Controller, ConvertCelsius, ConvertFahrenheit, ConvertKelvin, View, DesktopView">
+      <created>1616513913615</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1603282715387</updated>
+      <updated>1616513913615</updated>
     </task>
-    <task id="LOCAL-00012" summary="Add files Vector, VectorMain">
-      <created>1604116047412</created>
+    <task id="LOCAL-00012" summary="Add files BinarySearchTreeMain, BinarySearchTree">
+      <created>1616586039829</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1604116047412</updated>
+      <updated>1616586039829</updated>
     </task>
-    <task id="LOCAL-00013" summary="Add files Vector, VectorMain">
-      <created>1604116179073</created>
+    <task id="LOCAL-00013" summary="Add files Matrix, MatrixMain">
+      <created>1617105106296</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1604116179073</updated>
+      <updated>1617105106296</updated>
     </task>
-    <task id="LOCAL-00014" summary="Add files Shape, Circle, Triangle, Rectangle, Square, AreaComparator, PerimeterComparator, ShapeMain">
-      <created>1604410900673</created>
+    <task id="LOCAL-00014" summary="Add files TemperatureMain, TemperatureCalculator, TemperatureController, TemperatureDesktopView">
+      <created>1617422712492</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1604410900673</updated>
+      <updated>1617422712492</updated>
     </task>
-    <task id="LOCAL-00015" summary="Add modules">
-      <created>1604411241925</created>
+    <task id="LOCAL-00015" summary="Add files BinarySearchTree, BinarySearchTreeComparator, BinarySearchTreeMain">
+      <created>1617713009049</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1604411241925</updated>
+      <updated>1617713009049</updated>
     </task>
-    <task id="LOCAL-00016" summary="Add files Shape">
-      <created>1604411535266</created>
+    <task id="LOCAL-00016" summary="Add files BinarySearchTreeNode">
+      <created>1617713593314</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1604411535266</updated>
+      <updated>1617713593314</updated>
     </task>
-    <task id="LOCAL-00017" summary="Add files Shape and ShapeMain">
-      <created>1604413764279</created>
+    <task id="LOCAL-00017" summary="Add files BinarySearchTree, BinarySearchTreeMain">
+      <created>1618402166137</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1604413764279</updated>
+      <updated>1618402166137</updated>
     </task>
-    <task id="LOCAL-00018" summary="Add files Range, RangeMain">
-      <created>1604583116888</created>
+    <task id="LOCAL-00018" summary="Add files BinarySearchTree">
+      <created>1618402346755</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1604583116888</updated>
+      <updated>1618402346755</updated>
     </task>
-    <task id="LOCAL-00019" summary="Add files Range, RangeMain">
-      <created>1605327677164</created>
+    <task id="LOCAL-00019" summary="Add files BinarySearchTree">
+      <created>1619104636912</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1605327677164</updated>
+      <updated>1619104636912</updated>
     </task>
-    <task id="LOCAL-00020" summary="Add files Circle, Rectangle, Shape, Square, Triangle, AreaComparator, PerimeterComparator, ShapeMain">
-      <created>1605328980569</created>
+    <task id="LOCAL-00020" summary="Add files TemperatureDesktopView, TemperatureCalculator, TemperatureMain, TemperatureScale, CelsiusScale, KelvinScale, FahrenheitScale">
+      <created>1619697026389</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1605328980569</updated>
+      <updated>1619697026389</updated>
     </task>
-    <task id="LOCAL-00021" summary="Add files Vector, VectorMain">
-      <created>1605528827684</created>
+    <task id="LOCAL-00021" summary="Add files TemperatureCalculator, TemperatureMain, TemperatureDesktopView">
+      <created>1619698833518</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1605528827684</updated>
+      <updated>1619698833518</updated>
     </task>
-    <task id="LOCAL-00022" summary="Add files ArrayListHome, ArrayListHomeMain">
-      <created>1605867145178</created>
+    <task id="LOCAL-00022" summary="Add files BinarySearchTree">
+      <created>1620217655613</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1605867145178</updated>
+      <updated>1620217655613</updated>
     </task>
-    <task id="LOCAL-00023" summary="Add files SinglyLinkedList">
-      <created>1605870853956</created>
+    <task id="LOCAL-00023" summary="Add files HashTable, HashTableMain">
+      <created>1620219061439</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1605870853956</updated>
+      <updated>1620219061439</updated>
     </task>
-    <task id="LOCAL-00024" summary="Add files Circle, Rectangle, Square, Triangle, ShapeMain">
-      <created>1606133756473</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1606133756473</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Add files Range, RangeMain">
-      <created>1606134669654</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1606134669654</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem">
-      <created>1607145544732</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1607145544732</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add files ArrayList, ArrayListMain">
-      <created>1607830274236</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1607830274236</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Add files Vector, VectorMain, ArrayListHomeMain">
-      <created>1608130273495</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1608130273495</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain">
-      <created>1608307453287</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1608307453287</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Add files ArrayList, ArrayListMain">
-      <created>1608735930681</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1608735930681</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain, Vector, VectorMain">
-      <created>1610454224953</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1610454224953</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add files ArrayList, ArrayListMain">
-      <created>1610551220579</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1610551220579</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Add files Person, PersonMain">
-      <created>1610709075295</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1610709075295</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Add files Vector, VectorMain">
-      <created>1611055200121</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1611055200121</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Add files SinglyLinkedList">
-      <created>1611229165529</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1611229165529</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Add files ArrayList, ArrayListMain">
-      <created>1611675703930</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1611675703930</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Add files Person, PersonMain, Vector, VectorMain">
-      <created>1611762650070</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1611762650070</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Add files SinglyLinkedList, SinglyLinkedListMain">
-      <created>1612280222062</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1612280222062</updated>
-    </task>
-    <option name="localTasksCounter" value="39" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,105 +297,89 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add project Range" />
-    <MESSAGE value="Add project Shapes" />
-    <MESSAGE value="Add project Range*" />
-    <MESSAGE value="Add project Vector" />
-    <MESSAGE value="Add files Shapes, Circle, Rectangle, Square, Triangle" />
-    <MESSAGE value="Add files Shape, Circle, Triangle, Rectangle, Square, AreaComparator, PerimeterComparator, ShapeMain" />
-    <MESSAGE value="Add modules" />
-    <MESSAGE value="Add files Shape" />
-    <MESSAGE value="Add files Shape and ShapeMain" />
-    <MESSAGE value="Add files Circle, Rectangle, Shape, Square, Triangle, AreaComparator, PerimeterComparator, ShapeMain" />
-    <MESSAGE value="Add files ArrayListHome, ArrayListHomeMain" />
-    <MESSAGE value="Add files Circle, Rectangle, Square, Triangle, ShapeMain" />
-    <MESSAGE value="Add files Range, RangeMain" />
-    <MESSAGE value="Add files Vector, VectorMain, Triangle, ShapeMain, Range, ArrayListHomeMain, SinglyLinkedList,SinglyLinkedListMain, ListItem" />
-    <MESSAGE value="Add files Vector, VectorMain, ArrayListHomeMain" />
-    <MESSAGE value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain" />
-    <MESSAGE value="Add files ListItem, SinglyLinkedList, SinglyLinkedListMain, Vector, VectorMain" />
-    <MESSAGE value="Add files Person, PersonMain" />
-    <MESSAGE value="Add files Vector, VectorMain" />
-    <MESSAGE value="Add files SinglyLinkedList" />
+    <MESSAGE value="Add files BinarySearchTree, BinarySearchTreeNode, BinarySearchTreeMain, SinglyLinkedList, SinglyLinkedListMain" />
+    <MESSAGE value="Add files PersonMain" />
     <MESSAGE value="Add files ArrayList, ArrayListMain" />
-    <MESSAGE value="Add files Person, PersonMain, Vector, VectorMain" />
-    <MESSAGE value="Add files SinglyLinkedList, SinglyLinkedListMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files SinglyLinkedList, SinglyLinkedListMain" />
+    <MESSAGE value="Add files SinglyLinkedList" />
+    <MESSAGE value="Add files SinglyLinkedList, Controller, Converter, TemperatureMain, DesktopView, View" />
+    <MESSAGE value="Add files ArrayList" />
+    <MESSAGE value="Add files ArrayList, SinglyLinkedList, Temperature.iml" />
+    <MESSAGE value="Add files Controller, ConvertCelsius, ConvertFahrenheit, ConvertKelvin, View, DesktopView" />
+    <MESSAGE value="Add files BinarySearchTreeMain, BinarySearchTree" />
+    <MESSAGE value="Add files Matrix, MatrixMain" />
+    <MESSAGE value="Add files TemperatureMain, TemperatureCalculator, TemperatureController, TemperatureDesktopView" />
+    <MESSAGE value="Add files BinarySearchTree, BinarySearchTreeComparator, BinarySearchTreeMain" />
+    <MESSAGE value="Add files BinarySearchTreeNode" />
+    <MESSAGE value="Add files BinarySearchTree, BinarySearchTreeMain" />
+    <MESSAGE value="Add files TemperatureDesktopView, TemperatureCalculator, TemperatureMain, TemperatureScale, CelsiusScale, KelvinScale, FahrenheitScale" />
+    <MESSAGE value="Add files TemperatureCalculator, TemperatureMain, TemperatureDesktopView" />
+    <MESSAGE value="Add files BinarySearchTree" />
+    <MESSAGE value="Add files HashTable, HashTableMain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files HashTable, HashTableMain" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="280" y="4" key="#Project_Structure" timestamp="1607144188897">
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1618671844213">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1607144188897" />
-    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1607829710467">
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1618671844213" />
+    <state x="583" y="299" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617104298665">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1607829710467" />
-    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604582974785">
+    <state x="583" y="299" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1617104298665" />
+    <state x="398" y="0" key="CommitChangelistDialog2" timestamp="1620219058456">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1604582974785" />
-    <state x="147" y="0" width="1114" height="860" key="CommitChangelistDialog2" timestamp="1612280216030">
+    <state x="398" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1620219058456" />
+    <state width="1557" height="174" key="GridCell.Tab.0.bottom" timestamp="1620488558690">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="147" y="0" width="1114" height="860" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1612280216030" />
-    <state width="380" height="442" key="Diff.GoToChangePopup" timestamp="1604411646468">
+    <state width="1557" height="174" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1620488558690" />
+    <state width="1557" height="174" key="GridCell.Tab.0.center" timestamp="1620488558690">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="380" height="442" key="Diff.GoToChangePopup/0.0.1600.860@0.0.1600.860" timestamp="1604411646468" />
-    <state x="152" y="68" key="DiffContextDialog" timestamp="1604411647999">
+    <state width="1557" height="174" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1620488558690" />
+    <state width="1557" height="174" key="GridCell.Tab.0.left" timestamp="1620488558690">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="152" y="68" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1604411647999" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1610449738353">
+    <state width="1557" height="174" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1620488558690" />
+    <state width="1557" height="174" key="GridCell.Tab.0.right" timestamp="1620488558690">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1610449738353" />
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom" timestamp="1612280858158">
+    <state width="1557" height="174" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1620488558690" />
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1614687175967">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
-    <state width="1557" height="162" key="GridCell.Tab.0.center" timestamp="1612280858158">
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1614687175967" />
+    <state width="1557" height="276" key="GridCell.Tab.1.center" timestamp="1614687175967">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
-    <state width="1557" height="162" key="GridCell.Tab.0.left" timestamp="1612280858158">
+    <state width="1557" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1614687175967" />
+    <state width="1557" height="276" key="GridCell.Tab.1.left" timestamp="1614687175967">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
-    <state width="1557" height="162" key="GridCell.Tab.0.right" timestamp="1612280858158">
+    <state width="1557" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1614687175967" />
+    <state width="1557" height="276" key="GridCell.Tab.1.right" timestamp="1614687175967">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1612280858158" />
-    <state x="519" y="132" key="RollbackChangesDialog" timestamp="1611761967263">
+    <state width="1557" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1614687175967" />
+    <state x="491" y="150" key="RollbackChangesDialog" timestamp="1616512989853">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="519" y="132" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1611761967263" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1612280227937">
+    <state x="491" y="150" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1616512989853" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1620219065446">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1612280227937" />
-    <state x="616" y="208" key="chooseDestDirectoryDialog" timestamp="1606134308769">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1620219065446" />
+    <state x="182" y="50" key="new project wizard" timestamp="1618636638989">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="616" y="208" key="chooseDestDirectoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1606134308769" />
-    <state x="182" y="50" key="new project wizard" timestamp="1608955236252">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1608955236252" />
+    <state x="182" y="50" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1618636638989" />
   </component>
 </project>
