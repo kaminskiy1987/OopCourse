@@ -7,8 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TemperatureDesktopView extends JFrame {
-    TemperatureScale[] temperatureScales;
-    TemperatureCalculator temperatureCalculator;
+    private TemperatureScale[] temperatureScales;
+    private TemperatureCalculator temperatureCalculator;
 
     public TemperatureDesktopView(TemperatureScale[] temperatureScales, TemperatureCalculator temperatureCalculator) {
         this.temperatureScales = temperatureScales;
@@ -19,30 +19,26 @@ public class TemperatureDesktopView extends JFrame {
             Container pane = getContentPane();
             pane.setLayout(new GridLayout(5, 5));
 
-            JButton convertButton = new JButton("Temperature Converter");
+            JButton convertButton = new JButton("Convert");
 
             JLabel l1 = new JLabel("From", JLabel.CENTER);
-
             JLabel l2 = new JLabel("To", JLabel.CENTER);
-
             JLabel data = new JLabel("Data: ", JLabel.CENTER);
-
             JLabel result = new JLabel("Result is: ", JLabel.CENTER);
 
             JTextField textInput = new JTextField(20);
-
             JTextField textOutput = new JTextField(20);
 
-            JComboBox<TemperatureScale> fromCombo = new JComboBox<>(temperatureScales);
-            fromCombo.setVisible(true);
+            JComboBox<TemperatureScale> fromComboBox = new JComboBox<>(temperatureScales);
+            fromComboBox.setVisible(true);
 
-            JComboBox<TemperatureScale> toCombo = new JComboBox<>(temperatureScales);
-            toCombo.setVisible(true);
+            JComboBox<TemperatureScale> toComboBox = new JComboBox<>(temperatureScales);
+            toComboBox.setVisible(true);
 
             convertButton.addActionListener(e -> {
                 try {
-                    TemperatureScale from = ((TemperatureScale) fromCombo.getSelectedItem());
-                    TemperatureScale to = ((TemperatureScale) toCombo.getSelectedItem());
+                    TemperatureScale from = ((TemperatureScale) fromComboBox.getSelectedItem());
+                    TemperatureScale to = ((TemperatureScale) toComboBox.getSelectedItem());
 
                     double temperature = Double.parseDouble(textInput.getText());
                     textInput.setText(Double.toString(temperature));
@@ -55,19 +51,12 @@ public class TemperatureDesktopView extends JFrame {
             });
 
             pane.add(l1);
-
-            pane.add(fromCombo);
-
+            pane.add(fromComboBox);
             pane.add(l2);
-
-            pane.add(toCombo);
-
+            pane.add(toComboBox);
             pane.add(data);
-
             pane.add(textInput);
-
             pane.add(result);
-
             pane.add(textOutput);
 
             pane.add(convertButton);
