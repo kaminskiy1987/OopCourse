@@ -42,6 +42,18 @@ public class HashTableMain {
         System.out.println("arrayList2 : " + arrayList2);
         System.out.println("arrayList3 : " + arrayList3);
         System.out.println("arrayList4 : " + arrayList4);
+        
+        System.out.println("addAll(collection): " + arrayList1.addAll(arrayList4));
+        System.out.println("arrayList2_addAll: " + arrayList1);
+        System.out.println("arrayList3_addAll: " + arrayList4);
+
+        System.out.println("removeAll: " + arrayList2.removeAll(arrayList3));
+        System.out.println("arrayList2: " + arrayList2);
+        System.out.println("arrayList3: " + arrayList3);
+
+        System.out.println("retainAll: " + arrayList2.retainAll(arrayList3));
+        System.out.println("arrayList4: " + arrayList2);
+        System.out.println("arrayList41: " + arrayList3);
 
         ArrayList<String> strings = new ArrayList<>();
         strings.add("q");
